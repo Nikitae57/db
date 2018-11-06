@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7b9540ac-6bb3-4f5a-938f-6907164f8cab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db" beforeDir="false" afterPath="$PROJECT_DIR$/db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/META-INF/lab1.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/META-INF/lab1.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Main$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Main$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/StudentEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/StudentEntry.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentEntry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentEntry.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Util.kt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,25 +35,25 @@
           <entry key="db" value="2" />
           <entry key="db2" value="2" />
           <entry key="db3" value="1" />
-          <entry key="kt" value="8" />
+          <entry key="kt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Kotlin" value="8" />
+          <entry key="Kotlin" value="9" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="db" value="289" />
-          <entry key="kt" value="5946" />
+          <entry key="db" value="290" />
+          <entry key="kt" value="7040" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="5946" />
-          <entry key="PLAIN_TEXT" value="289" />
+          <entry key="Kotlin" value="7040" />
+          <entry key="PLAIN_TEXT" value="290" />
         </counts>
       </usages-collector>
     </session>
@@ -62,9 +65,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Main.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+                <state relative-caret-position="572">
+                  <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
                   <folding>
+                    <element signature="n#!!block;n#menuAddStudent#0;n#!!block;n#Main#0" />
                     <element signature="n#!!block;n#readBlocks#0;n#!!block;n#Main#0" />
                     <element signature="n#!!block;n#findLastBlock#0;n#!!block;n#Main#0" />
                     <element signature="n#!!block;n#select#0;n#!!block;n#Main#0" />
@@ -85,10 +89,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Extension.kt">
+            <entry file="file://$PROJECT_DIR$/src/Util.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+                <state relative-caret-position="391">
+                  <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
                 </state>
               </provider>
             </entry>
@@ -97,7 +101,7 @@
             <entry file="file://$PROJECT_DIR$/src/StudentEntry.kt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="119">
-                  <caret line="7" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+                  <caret line="7" column="8" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -105,8 +109,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Block.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+                <state relative-caret-position="527">
+                  <caret line="34" column="52" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="34" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
@@ -127,8 +131,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/db">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+                <state relative-caret-position="85">
+                  <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -173,9 +177,9 @@
         <option value="$PROJECT_DIR$/db3" />
         <option value="$PROJECT_DIR$/src/Block.kt" />
         <option value="$PROJECT_DIR$/src/Util.kt" />
-        <option value="$PROJECT_DIR$/db" />
         <option value="$PROJECT_DIR$/src/StudentEntry.kt" />
         <option value="$PROJECT_DIR$/src/Extension.kt" />
+        <option value="$PROJECT_DIR$/db" />
         <option value="$PROJECT_DIR$/src/Main.kt" />
       </list>
     </option>
@@ -283,7 +287,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20461000" />
+    <option name="totallyTimeSpent" value="23298000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -311,7 +315,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.20567375" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32907802" />
@@ -335,14 +339,7 @@
     <entry file="file://$PROJECT_DIR$/src/StudentEntry.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Block.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -367,35 +364,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Extension.kt" />
     <entry file="file://$PROJECT_DIR$/src/Util.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="391">
+          <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Extension.kt">
+    <entry file="file://$PROJECT_DIR$/src/Block.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="527">
+          <caret line="34" column="52" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="34" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        <state relative-caret-position="572">
+          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
           <folding>
+            <element signature="n#!!block;n#menuAddStudent#0;n#!!block;n#Main#0" />
             <element signature="n#!!block;n#readBlocks#0;n#!!block;n#Main#0" />
             <element signature="n#!!block;n#findLastBlock#0;n#!!block;n#Main#0" />
             <element signature="n#!!block;n#select#0;n#!!block;n#Main#0" />
