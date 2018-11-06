@@ -5,21 +5,33 @@ import kotlin.collections.ArrayList
 class Main {
 
     private lateinit var db: File
+    private val MENU = """
+        |1) Show all students
+        |2) Find student
+        |3) Add student
+        |4) Modify student
+        |5) Delete student
+    """.trimMargin()
 
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            Main().go()
+            Main().showMenu()
         }
     }
 
-    fun go() {
-        db = File("db")
+    fun showMenu() {
+        val scanner = Scanner(System.`in`)
+        val dbFileName = scanner.ask("Enter db file name")
+        db = File(dbFileName)
         val block = readBlocks(db)
-        block.print()
 
-        val entry = select(block, "11")[0]
-        println(add(block, entry))
+        while (true) {
+            when (scanner.nextLine()) {
+                "1" -> showEverything(block)
+                else -> println("Wrong")
+            }
+        }
     }
 
     fun readBlocks(file: File): Block {
@@ -148,11 +160,11 @@ class Main {
         try {
             val scanner = Scanner(System.`in`)
             when (scanner.nextInt()) {
-                1 -> modifyStudId(entry)
-                2 -> modifyGroupId(entry)
-                3 -> modifyLastname(entry)
-                4 -> modifyFirstName(entry)
-                5 -> modifyMiddleName(entry)
+                1 -> modifyStudId(entry, block)
+                2 -> modifyGroupId(entry, block)
+                3 -> modifyLastname(entry, block)
+                4 -> modifyFirstName(entry, block)
+                5 -> modifyMiddleName(entry, block)
 
                 else -> throw IOException()
             }
@@ -161,23 +173,60 @@ class Main {
         }
     }
 
-    private fun modifyMiddleName(entry: StudentEntry) {
-        TODO("not implemented")
+    private fun modifyMiddleName(entry: StudentEntry, block: Block) {
+        println("Enter name:")
+        entry.midName = Scanner(System.`in`).nextLine()
+        save(block, db)
     }
 
-    private fun modifyFirstName(entry: StudentEntry) {
-        TODO("not implemented")
+    private fun modifyFirstName(entry: StudentEntry, block: Block) {
+        println("Enter name:")
+        entry.firstName = Scanner(System.`in`).nextLine()
+        save(block, db)
     }
 
-    private fun modifyLastname(entry: StudentEntry) {
-        TODO("not implemented")
+    private fun modifyLastname(entry: StudentEntry, block: Block) {
+        println("Enter name:")
+        entry.lastName = Scanner(System.`in`).nextLine()
+        save(block, db)
     }
 
-    private fun modifyGroupId(entry: StudentEntry) {
-        TODO("not implemented")
+    private fun modifyGroupId(entry: StudentEntry, block: Block) {
+        println("Enter group id:")
+        entry.groupId = Scanner(System.`in`).nextInt()
+        save(block, db)
     }
 
-    fun modifyStudId(entry: StudentEntry) {
-        TODO("not implemented")
+    fun modifyStudId(entry: StudentEntry, block: Block) {
+        println("Enter student id:")
+        val id = Scanner(System.`in`).nextInt()
+
+        if (idIsUnique(id, block)) {
+            entry.studId = id
+            save(block, db)
+        }
+    }
+
+    fun idIsUnique(id: Int, block: Block): Boolean {
+        var currentBlock = block
+
+        while (true) {
+            val idAlreadyExists = currentBlock.entries.any { it.studId == id }
+            if (idAlreadyExists) {
+                return false
+            }
+
+            currentBlock = currentBlock.nextBlock ?: break
+        }
+
+        return true
+    }
+
+    fun showEverything(block: Block) {
+        var currentBlock = block
+        while (true) {
+            currentBlock.print()
+            currentBlock = currentBlock.nextBlock ?: break
+        }
     }
 }

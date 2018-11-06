@@ -1,9 +1,9 @@
 import java.io.Serializable
 
 data class StudentEntry(
-    val studId: Int,
-    val groupId: Int,
-    val lastName: String,
-    val firstName: String,
-    val midName: String
+    var studId: Int,
+    var groupId: Int,
+    var lastName: String,
+    var firstName: String,
+    var midName: String
 ) : Serializable
