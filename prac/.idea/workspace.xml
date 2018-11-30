@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d23239d-3b22-4fac-ac6b-1109f5970f01" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/63a2cf13-51ac-4819-a04a-14b10457b841.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prac.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/prac.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,39 +30,18 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mydb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="journal@127.0.0.1" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mydb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="journal@127.0.0.1" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mydb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="journal@127.0.0.1" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="mydb: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mydb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="mydb: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="gr: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mydb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="mydb: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="spec: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mydb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="mydb: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="student: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="journal: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -71,40 +55,54 @@
     <session id="-1727665550">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="7" />
-          <entry key="sql" value="563" />
-          <entry key="txt" value="29" />
+          <entry key="cell" value="13" />
+          <entry key="sql" value="3962" />
+          <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="29" />
-          <entry key="SQL" value="563" />
-          <entry key="Scratch" value="7" />
+          <entry key="PLAIN_TEXT" value="36" />
+          <entry key="SQL" value="864" />
+          <entry key="Scratch" value="3111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gr" value="1" />
+          <entry key="DATABASE/20585275-3b7c-489a-b2d2-3563d0463031" value="1" />
+          <entry key="SCHEMA:journal" value="1" />
+          <entry key="class" value="1" />
+          <entry key="class_type" value="1" />
+          <entry key="faculty" value="3" />
+          <entry key="faculty_has_speciality" value="2" />
+          <entry key="gr" value="2" />
           <entry key="gr_fk_spec" value="1" />
+          <entry key="group" value="3" />
           <entry key="spec" value="1" />
-          <entry key="sql" value="2" />
-          <entry key="student" value="1" />
+          <entry key="speciality" value="4" />
+          <entry key="sql" value="3" />
+          <entry key="student" value="2" />
+          <entry key="subject" value="2" />
+          <entry key="teacher" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="3" />
+          <entry key="Database Element" value="23" />
           <entry key="SQL" value="2" />
-          <entry key="Scratch" value="1" />
+          <entry key="Scratch" value="2" />
+          <entry key="UML" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -115,12 +113,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/63a2cf13-51ac-4819-a04a-14b10457b841/console.sql">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/prac.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/spec">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/20585275-3b7c-489a-b2d2-3563d0463031/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="332" selection-start-line="332" selection-end-line="341" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/group">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -129,17 +140,140 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prac.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/student">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/gr/index/gr_fk_spec">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/faculty_has_speciality">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/20585275-3b7c-489a-b2d2-3563d0463031">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>20585275-3b7c-489a-b2d2-3563d0463031</OriginalElement>
+              <nodes>
+                <node x="446.5" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty</node>
+                <node x="197.1071428571429" y="581.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher</node>
+                <node x="416.2738095238096" y="292.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
+                <node x="448.7738095238096" y="837.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone</node>
+                <node x="195.0" y="358.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject</node>
+                <node x="372.58333333333337" y="1016.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class</node>
+                <node x="512.5238095238096" y="548.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student</node>
+                <node x="227.6071428571429" y="804.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class</node>
+                <node x="0.0" y="347.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type</node>
+                <node x="612.5" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality</node>
+                <node x="309.25" y="124.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher</node>
+                <node x="498.25" y="146.5">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
+                  <point x="27.75" y="-70.0" />
+                  <point x="335.8571428571429" y="523.0" />
+                  <point x="351.5" y="523.0" />
+                  <point x="-42.25" y="59.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class">
+                  <point x="-49.0" y="-59.0" />
+                  <point x="421.58333333333337" y="991.0" />
+                  <point x="308.1071428571429" y="991.0" />
+                  <point x="0.0" y="81.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality">
+                  <point x="53.5" y="-36.5" />
+                  <point x="658.75" y="99.0" />
+                  <point x="691.0" y="99.0" />
+                  <point x="0.0" y="37.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+                  <point x="49.0" y="-59.0" />
+                  <point x="519.5833333333334" y="991.0" />
+                  <point x="655.2738095238096" y="991.0" />
+                  <point x="655.2738095238096" y="779.0" />
+                  <point x="645.2738095238096" y="779.0" />
+                  <point x="44.25" y="103.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
+                  <point x="-93.66666666666669" y="-103.0" />
+                  <point x="463.1071428571429" y="267.0" />
+                  <point x="436.0" y="267.0" />
+                  <point x="42.25" y="59.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group">
+                  <point x="83.25" y="-70.0" />
+                  <point x="391.3571428571429" y="523.0" />
+                  <point x="463.1071428571429" y="523.0" />
+                  <point x="-93.66666666666669" y="103.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+                  <point x="93.66666666666676" y="103.0" />
+                  <point x="650.4404761904764" y="523.0" />
+                  <point x="645.2738095238096" y="523.0" />
+                  <point x="44.25" y="-103.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type">
+                  <point x="-83.25" y="-70.0" />
+                  <point x="224.8571428571429" y="523.0" />
+                  <point x="87.5" y="523.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality">
+                  <point x="93.66666666666663" y="-103.0" />
+                  <point x="650.4404761904761" y="267.0" />
+                  <point x="658.75" y="267.0" />
+                  <point x="53.5" y="36.5" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group">
+                  <point x="-44.25" y="-103.0" />
+                  <point x="0.0" y="103.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher">
+                  <point x="53.666666666666686" y="-81.0" />
+                  <point x="361.7738095238096" y="779.0" />
+                  <point x="382.1071428571429" y="779.0" />
+                  <point x="74.0" y="70.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty">
+                  <point x="-53.5" y="-36.5" />
+                  <point x="551.75" y="99.0" />
+                  <point x="519.5" y="99.0" />
+                  <point x="0.0" y="37.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+                  <point x="0.0" y="-48.0" />
+                  <point x="546.7738095238095" y="779.0" />
+                  <point x="556.7738095238096" y="779.0" />
+                  <point x="-44.25" y="103.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject">
+                  <point x="-27.75" y="-70.0" />
+                  <point x="280.3571428571429" y="523.0" />
+                  <point x="268.0" y="523.0" />
+                  <point x="0.0" y="37.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.4081632653061224" x="552.5" y="578.0000000000001" />
+              <SelectedNodes>
+                <node>20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -151,6 +285,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/prac.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/20585275-3b7c-489a-b2d2-3563d0463031/console.sql" />
       </list>
     </option>
   </component>
@@ -166,11 +301,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="5" />
-    <option name="y" value="200" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -180,6 +314,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -197,7 +332,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,8 +339,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -232,16 +368,20 @@
       <updated>1541599794562</updated>
       <workItem from="1541599797426" duration="2337000" />
       <workItem from="1541681294013" duration="877000" />
+      <workItem from="1542186522724" duration="219000" />
+      <workItem from="1542188855559" duration="2876000" />
+      <workItem from="1543401063285" duration="5610000" />
+      <workItem from="1543482424965" duration="2730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3214000" />
+    <option name="totallyTimeSpent" value="14649000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.25302014" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" weight="0.3326087" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -253,17 +393,17 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="7" visible="true" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="7" sideWeight="0.49891305" visible="true" weight="0.28694403" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32968238" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50108695" side_tool="true" weight="0.38554215" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.20469798" />
+      <window_info anchor="right" id="Database" order="5" weight="0.2773925" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3295302" />
     </layout>
   </component>
@@ -274,37 +414,237 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/gr/index/gr_fk_spec">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/gr">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/student">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/student" />
+    <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/gr/index/gr_fk_spec" />
+    <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/spec" />
+    <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/group" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/63a2cf13-51ac-4819-a04a-14b10457b841/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prac.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/spec">
+    <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/gr" />
+    <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/speciality" />
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/class_type">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/20585275-3b7c-489a-b2d2-3563d0463031.SCHEMA:journal">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>20585275-3b7c-489a-b2d2-3563d0463031.SCHEMA:journal</OriginalElement>
+          <nodes>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher</node>
+            <node x="" y="">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9367114788004137" x="389.0" y="362.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/class">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prac.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/faculty">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/speciality">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/20585275-3b7c-489a-b2d2-3563d0463031">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>20585275-3b7c-489a-b2d2-3563d0463031</OriginalElement>
+          <nodes>
+            <node x="446.5" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty</node>
+            <node x="197.1071428571429" y="581.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher</node>
+            <node x="416.2738095238096" y="292.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
+            <node x="448.7738095238096" y="837.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone</node>
+            <node x="195.0" y="358.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject</node>
+            <node x="372.58333333333337" y="1016.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class</node>
+            <node x="512.5238095238096" y="548.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student</node>
+            <node x="227.6071428571429" y="804.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class</node>
+            <node x="0.0" y="347.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type</node>
+            <node x="612.5" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality</node>
+            <node x="309.25" y="124.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher</node>
+            <node x="498.25" y="146.5">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
+              <point x="27.75" y="-70.0" />
+              <point x="335.8571428571429" y="523.0" />
+              <point x="351.5" y="523.0" />
+              <point x="-42.25" y="59.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class">
+              <point x="-49.0" y="-59.0" />
+              <point x="421.58333333333337" y="991.0" />
+              <point x="308.1071428571429" y="991.0" />
+              <point x="0.0" y="81.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality">
+              <point x="53.5" y="-36.5" />
+              <point x="658.75" y="99.0" />
+              <point x="691.0" y="99.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+              <point x="49.0" y="-59.0" />
+              <point x="519.5833333333334" y="991.0" />
+              <point x="655.2738095238096" y="991.0" />
+              <point x="655.2738095238096" y="779.0" />
+              <point x="645.2738095238096" y="779.0" />
+              <point x="44.25" y="103.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
+              <point x="-93.66666666666669" y="-103.0" />
+              <point x="463.1071428571429" y="267.0" />
+              <point x="436.0" y="267.0" />
+              <point x="42.25" y="59.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group">
+              <point x="83.25" y="-70.0" />
+              <point x="391.3571428571429" y="523.0" />
+              <point x="463.1071428571429" y="523.0" />
+              <point x="-93.66666666666669" y="103.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+              <point x="93.66666666666676" y="103.0" />
+              <point x="650.4404761904764" y="523.0" />
+              <point x="645.2738095238096" y="523.0" />
+              <point x="44.25" y="-103.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type">
+              <point x="-83.25" y="-70.0" />
+              <point x="224.8571428571429" y="523.0" />
+              <point x="87.5" y="523.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality">
+              <point x="93.66666666666663" y="-103.0" />
+              <point x="650.4404761904761" y="267.0" />
+              <point x="658.75" y="267.0" />
+              <point x="53.5" y="36.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group">
+              <point x="-44.25" y="-103.0" />
+              <point x="0.0" y="103.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher">
+              <point x="53.666666666666686" y="-81.0" />
+              <point x="361.7738095238096" y="779.0" />
+              <point x="382.1071428571429" y="779.0" />
+              <point x="74.0" y="70.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty">
+              <point x="-53.5" y="-36.5" />
+              <point x="551.75" y="99.0" />
+              <point x="519.5" y="99.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+              <point x="0.0" y="-48.0" />
+              <point x="546.7738095238095" y="779.0" />
+              <point x="556.7738095238096" y="779.0" />
+              <point x="-44.25" y="103.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject">
+              <point x="-27.75" y="-70.0" />
+              <point x="280.3571428571429" y="523.0" />
+              <point x="268.0" y="523.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.4081632653061224" x="552.5" y="578.0000000000001" />
+          <SelectedNodes>
+            <node>20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/faculty_has_speciality">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/teacher">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/subject">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/student">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/group">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/20585275-3b7c-489a-b2d2-3563d0463031/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="332" selection-start-line="332" selection-end-line="341" selection-end-column="2" />
         </state>
       </provider>
     </entry>
