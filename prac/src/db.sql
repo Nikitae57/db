@@ -4,7 +4,7 @@ USE journal;
 
 CREATE TABLE IF NOT EXISTS teacher
 (
-  id          INT         NOT NULL,
+  id          INT         NOT NULL AUTO_INCREMENT,
   `lastname`  VARCHAR(45) NOT NULL,
   `firstname` VARCHAR(45) NOT NULL,
   `midname`   VARCHAR(45) NOT NULL,
@@ -13,14 +13,14 @@ CREATE TABLE IF NOT EXISTS teacher
 
 CREATE TABLE IF NOT EXISTS faculty
 (
-  id     INT         NOT NULL,
+  id     INT         NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS speciality
 (
-  id     INT         NOT NULL,
+  id     INT         NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (id)
 );
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `group`
 
 CREATE TABLE IF NOT EXISTS student
 (
-  id          INT         NOT NULL AUTO_INCREMENT,
+  id          INT         NOT NULL,
   `lastname`  VARCHAR(45) NOT NULL,
   `firstname` VARCHAR(45) NOT NULL,
   `midname`   VARCHAR(45) NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS student
 
 CREATE TABLE IF NOT EXISTS class_type
 (
-  id INT         NOT NULL,
+  id INT         NOT NULL AUTO_INCREMENT,
   `type_name`    VARCHAR(45) NOT NULL,
   `hours_number` INT         NOT NULL,
 
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS subject
 
 CREATE TABLE IF NOT EXISTS class
 (
-  id      INT         NOT NULL,
+  id      INT         NOT NULL AUTO_INCREMENT,
   `date`  DATE        NOT NULL,
   `topic` VARCHAR(45) NULL,
 
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS class
 
 CREATE TABLE IF NOT EXISTS phone
 (
-  id         INT         NOT NULL,
+  id         INT         NOT NULL AUTO_INCREMENT,
   `number`   VARCHAR(12) NOT NULL,
 
   PRIMARY KEY (id)
