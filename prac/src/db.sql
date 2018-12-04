@@ -404,3 +404,260 @@ VALUES (170576,
         '1967-09-16',
         '2017-09-01',
         (SELECT id FROM `group` WHERE groupName = '71-Б'));
+
+INSERT phone (student_id, number)
+VALUES (170573, 88005553535),
+       (170265, 88005553536),
+       (170122, 88005553537),
+       (170214, 88005553538),
+       (170124, 88005553539),
+       (170222, 88005553540),
+       (170524, 88005553541),
+       (170224, 88005553542),
+       (170123, 88005553543),
+       (170784, 88005553544),
+       (170514, 88005553545),
+       (170586, 88005553546),
+       (170554, 88005553547),
+       (170576, 88005553548),
+       (170572, 88005553549),
+       (170124, 88005553550),
+       (170123, 88005553551);
+
+INSERT class_type (type_name, hours_number)
+VALUES ('Лабораторная работа', 2),
+       ('Практическая работа', 1),
+       ('Лекция', 1);
+
+alter table group_has_type_subject_teacher
+  drop primary key,
+  add primary key (class_type_id, group_id, subject_id, teacher_id);
+
+INSERT group_has_type_subject_teacher (class_type_id, group_id, subject_id, teacher_id, hours_number)
+VALUES
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Рыженков'
+    AND teacher.firstname = 'Денис'
+    AND teacher.midname = 'Викторович'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1)
+),
+
+(
+ (SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Волков'
+    AND teacher.firstname = 'Вадим'
+    AND teacher.midname = 'Николаевич'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1)
+ ),
+
+(
+ (SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Рыженков'
+    AND teacher.firstname = 'Денис'
+    AND teacher.midname = 'Викторович'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1)
+ ),
+
+(
+ (SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Рыженков'
+    AND teacher.firstname = 'Денис'
+    AND teacher.midname = 'Викторович'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1)
+ );
+
+INSERT group_has_type_subject_teacher (class_type_id, group_id, subject_id, teacher_id, hours_number)
+VALUES
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Харламов'
+    AND teacher.firstname = 'Владимир'
+    AND teacher.midname = 'Федорович'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1)),
+
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Харламов'
+    AND teacher.firstname = 'Владимир'
+    AND teacher.midname = 'Федорович'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1)
+);
+
+INSERT group_has_type_subject_teacher (class_type_id, group_id, subject_id, teacher_id, hours_number)
+VALUES
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПИ' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Харламов'
+    AND teacher.firstname = 'Владимир'
+    AND teacher.midname = 'Федорович'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1)),
+
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПИ' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Харламов'
+    AND teacher.firstname = 'Владимир'
+    AND teacher.midname = 'Федорович'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1)
+);
+
+INSERT group_has_type_subject_teacher (class_type_id, group_id, subject_id, teacher_id, hours_number)
+VALUES
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Харламов'
+    AND teacher.firstname = 'Владимир'
+    AND teacher.midname = 'Федорович'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1)),
+
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Харламов'
+    AND teacher.firstname = 'Владимир'
+    AND teacher.midname = 'Федорович'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1)
+),
+
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Харламов'
+    AND teacher.firstname = 'Владимир'
+    AND teacher.midname = 'Федорович'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1)
+);
+
+INSERT group_has_type_subject_teacher (class_type_id, group_id, subject_id, teacher_id, hours_number)
+VALUES
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Биология' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Фроленкова'
+    AND teacher.firstname = 'Лариса'
+    AND teacher.midname = 'Юрьевна'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1)),
+
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Биология' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Фроленкова'
+    AND teacher.firstname = 'Лариса'
+    AND teacher.midname = 'Юрьевна'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1)
+),
+
+((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1),
+ (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
+ (SELECT subject.id FROM subject WHERE subject.name = 'Биология' LIMIT 1),
+ (SELECT teacher.id
+  FROM teacher
+  WHERE teacher.lastname = 'Фроленкова'
+    AND teacher.firstname = 'Лариса'
+    AND teacher.midname = 'Юрьевна'
+  LIMIT 1),
+ (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1)
+);
+
+ALTER TABLE class
+  ADD COLUMN group_has_type_subject_teacher_teacher_id INT NOT NULL,
+
+  ADD CONSTRAINT fk_class_group_has_type_subject_teacher_teacher_id
+    FOREIGN KEY (group_has_type_subject_teacher_teacher_id)
+      REFERENCES journal.group_has_type_subject_teacher (teacher_id)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION;
+
+INSERT class (date,
+              topic,
+              group_has_type_subject_teacher_teacher_id,
+              group_has_type_subject_teacher_group_id,
+              group_has_type_subject_teacher_subject_id,
+              group_has_type_subject_teacher_class_type_id)
+
+VALUES ('2018-12-24',
+        'Тема по базам данных №1',
+        (SELECT teacher.id
+         FROM teacher
+         WHERE teacher.lastname = 'Рыженков'
+           AND teacher.firstname = 'Денис'
+           AND teacher.midname = 'Викторович'
+         LIMIT 1),
+        (SELECT `group`.id FROM `group` WHERE groupName = '71-ПГ'),
+        (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных'),
+        (SELECT id FROM class_type WHERE class_type.type_name = 'Лекция')),
+
+       ('2018-12-25',
+        NULL,
+        (SELECT teacher.id
+         FROM teacher
+         WHERE teacher.lastname = 'Рыженков'
+           AND teacher.firstname = 'Денис'
+           AND teacher.midname = 'Викторович'
+         LIMIT 1),
+        (SELECT `group`.id FROM `group` WHERE groupName = '71-ПГ'),
+        (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных'),
+        (SELECT id FROM class_type WHERE class_type.type_name = 'Лабораторная работа')),
+
+       ('2018-12-26',
+        NULL,
+        (SELECT teacher.id
+         FROM teacher
+         WHERE teacher.lastname = 'Волков'
+           AND teacher.firstname = 'Вадим'
+           AND teacher.midname = 'Николаевич'
+         LIMIT 1),
+        (SELECT `group`.id FROM `group` WHERE groupName = '71-ПГ'),
+        (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных' LIMIT 1),
+        (SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1));
