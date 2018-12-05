@@ -1,663 +1,4469 @@
-#CREATE DATABASE journal;
+#CREATE
+DATABASE
+journal;
 
-USE journal;
+USE
+journal;
 
 CREATE TABLE IF NOT EXISTS teacher
 (
-  id        INT         NOT NULL AUTO_INCREMENT,
-  lastname  VARCHAR(45) NOT NULL,
-  firstname VARCHAR(45) NOT NULL,
-  midname   VARCHAR(45) NOT NULL,
-  PRIMARY KEY (id)
-);
+  id
+  INT
+  NOT
+  NULL
+  AUTO_INCREMENT,
+  lastname
+  VARCHAR
+(
+  45
+) NOT NULL,
+  firstname VARCHAR
+(
+  45
+) NOT NULL,
+  midname VARCHAR
+(
+  45
+) NOT NULL,
+  PRIMARY KEY
+(
+  id
+)
+  );
 
 CREATE TABLE IF NOT EXISTS faculty
 (
-  id     INT         AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(45) NOT NULL
-);
+  id
+  INT
+  AUTO_INCREMENT
+  PRIMARY
+  KEY,
+  name
+  VARCHAR
+(
+  45
+) NOT NULL
+  );
 
 CREATE TABLE IF NOT EXISTS speciality
 (
-  id     INT         NOT NULL AUTO_INCREMENT,
-  name VARCHAR(45) NOT NULL,
-  PRIMARY KEY (id)
-);
+  id
+  INT
+  NOT
+  NULL
+  AUTO_INCREMENT,
+  name
+  VARCHAR
+(
+  45
+) NOT NULL,
+  PRIMARY KEY
+(
+  id
+)
+  );
 
 CREATE TABLE IF NOT EXISTS `group`
 (
-  id          INT         NOT NULL AUTO_INCREMENT,
-  groupName VARCHAR(45) NOT NULL,
-  semester  INT         NOT NULL,
-  course    INT         NOT NULL,
-
-  PRIMARY KEY (id)
-);
+  id
+  INT
+  NOT
+  NULL
+  AUTO_INCREMENT,
+  groupName
+  VARCHAR
+(
+  45
+) NOT NULL,
+  semester INT NOT NULL,
+  course INT NOT NULL,
+  PRIMARY KEY
+(
+  id
+)
+  );
 
 CREATE TABLE IF NOT EXISTS student
 (
-  id          INT         NOT NULL,
-  lastname  VARCHAR(45) NOT NULL,
-  firstname VARCHAR(45) NOT NULL,
-  midname   VARCHAR(45) NOT NULL,
-  address   VARCHAR(45) NOT NULL,
-  birthDate DATE        NOT NULL,
-  entryDate DATE        NOT NULL,
-
-  PRIMARY KEY (id)
-);
+  id
+  INT
+  NOT
+  NULL,
+  lastname
+  VARCHAR
+(
+  45
+) NOT NULL,
+  firstname VARCHAR
+(
+  45
+) NOT NULL,
+  midname VARCHAR
+(
+  45
+) NOT NULL,
+  address VARCHAR
+(
+  45
+) NOT NULL,
+  birthDate DATE NOT NULL,
+  entryDate DATE NOT NULL,
+  PRIMARY KEY
+(
+  id
+)
+  );
 
 CREATE TABLE IF NOT EXISTS class_type
 (
-  id INT         NOT NULL AUTO_INCREMENT,
-  type_name    VARCHAR(45) NOT NULL,
-  hours_number INT         NOT NULL,
-
-  PRIMARY KEY (id)
-);
+  id
+  INT
+  NOT
+  NULL
+  AUTO_INCREMENT,
+  type_name
+  VARCHAR
+(
+  45
+) NOT NULL,
+  hours_number INT NOT NULL,
+  PRIMARY KEY
+(
+  id
+)
+  );
 
 CREATE TABLE IF NOT EXISTS subject
 (
-  id   INT         NOT NULL AUTO_INCREMENT,
-  name VARCHAR(45) NOT NULL,
-
-  PRIMARY KEY (id)
-);
+  id
+  INT
+  NOT
+  NULL
+  AUTO_INCREMENT,
+  name
+  VARCHAR
+(
+  45
+) NOT NULL,
+  PRIMARY KEY
+(
+  id
+)
+  );
 
 CREATE TABLE IF NOT EXISTS class
 (
-  id    INT         NOT NULL AUTO_INCREMENT,
-  date  DATE        NOT NULL,
-  topic VARCHAR(45) NULL,
-
-  PRIMARY KEY (id)
-);
+  id
+  INT
+  NOT
+  NULL
+  AUTO_INCREMENT,
+  date
+  DATE
+  NOT
+  NULL,
+  topic
+  VARCHAR
+(
+  45
+) NULL,
+  PRIMARY KEY
+(
+  id
+)
+  );
 
 CREATE TABLE IF NOT EXISTS phone
 (
-  id         INT         NOT NULL AUTO_INCREMENT,
-  number   VARCHAR(12) NOT NULL,
-
-  PRIMARY KEY (id)
-);
+  id
+  INT
+  NOT
+  NULL
+  AUTO_INCREMENT,
+  number
+  VARCHAR
+(
+  12
+) NOT NULL,
+  PRIMARY KEY
+(
+  id
+)
+  );
 
 CREATE TABLE IF NOT EXISTS group_has_type_subject_teacher
 (
-  class_type_id  INT NOT NULL,
-  group_id       INT NOT NULL,
-  subject_id     INT NOT NULL,
-  teacher_id     INT NOT NULL,
-  hours_number INT NULL,
+  class_type_id
+  INT
+  NOT
+  NULL,
+  group_id
+  INT
+  NOT
+  NULL,
+  subject_id
+  INT
+  NOT
+  NULL,
+  teacher_id
+  INT
+  NOT
+  NULL,
+  hours_number
+  INT
+  NULL,
 
-  PRIMARY KEY (class_type_id, group_id, subject_id),
-
-  CONSTRAINT fk_group_has_type_subject_class_type
-    FOREIGN KEY (class_type_id)
-      REFERENCES journal.class_type (id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-
-  CONSTRAINT fk_group_has_type_subject_group
-    FOREIGN KEY (group_id)
-      REFERENCES journal.`group` (id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-
-  CONSTRAINT fk_group_has_type_subject_subject
-    FOREIGN KEY (subject_id)
-      REFERENCES journal.subject (id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-
-  CONSTRAINT fk_group_has_type_has_subject_teacher
-    FOREIGN KEY (teacher_id)
-      REFERENCES journal.teacher (id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION
-);
-
-
- CREATE TABLE IF NOT EXISTS student_has_class
+  PRIMARY
+  KEY
 (
-  student_id     INT     NOT NULL,
-  hasMissed    TINYINT NOT NULL,
-  isRespectful TINYINT NULL,
-  class_id       INT     NOT NULL,
+  class_type_id,
+  group_id,
+  subject_id
+),
+  CONSTRAINT fk_group_has_type_subject_class_type
+  FOREIGN KEY
+(
+  class_type_id
+)
+  REFERENCES journal.class_type
+(
+  id
+)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+  CONSTRAINT fk_group_has_type_subject_group
+  FOREIGN KEY
+(
+  group_id
+)
+  REFERENCES journal.`group`
+(
+  id
+)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+  CONSTRAINT fk_group_has_type_subject_subject
+  FOREIGN KEY
+(
+  subject_id
+)
+  REFERENCES journal.subject
+(
+  id
+)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+  CONSTRAINT fk_group_has_type_has_subject_teacher
+  FOREIGN KEY
+(
+  teacher_id
+)
+  REFERENCES journal.teacher
+(
+  id
+)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+  );
 
-  CONSTRAINT fk_student_has_class_student
-    FOREIGN KEY (student_id)
-    REFERENCES journal.student (id)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
 
+CREATE TABLE IF NOT EXISTS student_has_class
+(
+  student_id
+  INT
+  NOT
+  NULL,
+  hasMissed
+  TINYINT
+  NOT
+  NULL,
+  isRespectful
+  TINYINT
+  NULL,
+  class_id
+  INT
+  NOT
+  NULL,
+
+  CONSTRAINT
+  fk_student_has_class_student
+  FOREIGN
+  KEY
+(
+  student_id
+)
+  REFERENCES journal.student
+(
+  id
+)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
   CONSTRAINT fk_student_has_class_class
-    FOREIGN KEY (class_id)
-    REFERENCES journal.class (id)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-
-  PRIMARY KEY (student_id, class_id)
-);
+  FOREIGN KEY
+(
+  class_id
+)
+  REFERENCES journal.class
+(
+  id
+)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+  PRIMARY KEY
+(
+  student_id,
+  class_id
+)
+  );
 
 
 CREATE TABLE IF NOT EXISTS faculty_has_speciality
 (
-  faculty_id    INT NOT NULL,
-  speciality_id INT NOT NULL,
+  faculty_id
+  INT
+  NOT
+  NULL,
+  speciality_id
+  INT
+  NOT
+  NULL,
 
-  CONSTRAINT fk_faculty_has_speciality_faculty
-    FOREIGN KEY (faculty_id)
-      REFERENCES journal.faculty (id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-
+  CONSTRAINT
+  fk_faculty_has_speciality_faculty
+  FOREIGN
+  KEY
+(
+  faculty_id
+)
+  REFERENCES journal.faculty
+(
+  id
+)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
   CONSTRAINT fk_faculty_has_speciality_speciality
-    FOREIGN KEY (speciality_id)
-      REFERENCES journal.speciality (id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-
-  PRIMARY KEY (faculty_id, speciality_id)
-);
+  FOREIGN KEY
+(
+  speciality_id
+)
+  REFERENCES journal.speciality
+(
+  id
+)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+  PRIMARY KEY
+(
+  faculty_id,
+  speciality_id
+)
+  );
 
 ALTER TABLE student
   ADD COLUMN group_id INT NOT NULL,
-
   ADD CONSTRAINT fk_student_group
-    FOREIGN KEY (group_id)
-      REFERENCES `group` (id)
-      ON UPDATE NO ACTION
-      ON DELETE NO ACTION;
+  FOREIGN KEY (group_id)
+  REFERENCES `group` (id)
+  ON
+UPDATE NO ACTION
+ON
+DELETE
+NO
+ACTION;
 
 ALTER TABLE `group`
-  ADD COLUMN teacher_id                           INT,
-  ADD COLUMN student_id                           INT,
-  ADD COLUMN faculty_has_speciality_faculty_id    INT NOT NULL,
+  ADD COLUMN teacher_id INT,
+  ADD COLUMN student_id INT,
+  ADD COLUMN faculty_has_speciality_faculty_id INT NOT NULL,
   ADD COLUMN faculty_has_speciality_speciality_id INT NOT NULL,
-
   ADD CONSTRAINT fk_group_teacher
-    FOREIGN KEY (teacher_id)
-      REFERENCES journal.teacher (id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-
+  FOREIGN KEY (teacher_id)
+  REFERENCES journal.teacher (id)
+  ON
+DELETE
+NO
+ACTION
+ON
+UPDATE NO ACTION,
   ADD CONSTRAINT fk_group_student
-    FOREIGN KEY (student_id)
-      REFERENCES journal.student (id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-
+  FOREIGN KEY (student_id)
+  REFERENCES journal.student (id)
+ON
+DELETE
+NO
+ACTION
+ON
+UPDATE NO ACTION,
   ADD CONSTRAINT fk_group_speciality_faculty
-    FOREIGN KEY (faculty_has_speciality_faculty_id,
-                 faculty_has_speciality_speciality_id)
-      REFERENCES faculty_has_speciality (faculty_id, speciality_id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION;
+  FOREIGN KEY (faculty_has_speciality_faculty_id,
+  faculty_has_speciality_speciality_id)
+  REFERENCES faculty_has_speciality (faculty_id, speciality_id)
+ON
+DELETE
+NO
+ACTION
+ON
+UPDATE NO ACTION;
 
 ALTER TABLE phone
   ADD COLUMN student_id INT NOT NULL ,
-
   ADD CONSTRAINT fk_phone_student
-    FOREIGN KEY (student_id)
-      REFERENCES journal.student (id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION;
+  FOREIGN KEY (student_id)
+  REFERENCES journal.student (id)
+  ON
+DELETE
+NO
+ACTION
+ON
+UPDATE NO ACTION;
 
 ALTER TABLE class
-  ADD COLUMN group_has_type_subject_teacher_group_id      INT NOT NULL,
+  ADD COLUMN group_has_type_subject_teacher_group_id INT NOT NULL,
   ADD COLUMN group_has_type_subject_teacher_class_type_id INT NOT NULL,
-  ADD COLUMN group_has_type_subject_teacher_subject_id    INT NOT NULL,
-
+  ADD COLUMN group_has_type_subject_teacher_subject_id INT NOT NULL,
   ADD CONSTRAINT fk_class_group_has_type_subject_teacher
-    FOREIGN KEY (group_has_type_subject_teacher_group_id,
-                 group_has_type_subject_teacher_class_type_id,
-                 group_has_type_subject_teacher_subject_id)
-      REFERENCES journal.group_has_type_subject_teacher (group_id,
-                                                         class_type_id,
-                                                         subject_id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION;
+  FOREIGN KEY (group_has_type_subject_teacher_group_id,
+  group_has_type_subject_teacher_class_type_id,
+  group_has_type_subject_teacher_subject_id)
+  REFERENCES journal.group_has_type_subject_teacher (group_id,
+  class_type_id,
+  subject_id)
+  ON
+DELETE
+NO
+ACTION
+ON
+UPDATE NO ACTION;
 
-INSERT faculty (name)
-VALUES ('ИПАИТ'),
-       ('ИЕНИБ');
-
-INSERT speciality (name)
-VALUES ('Программная инженерия'),
-       ('Биология'),
-       ('Прикладная информатика');
-
-INSERT faculty_has_speciality (faculty_id, speciality_id)
-VALUES ((SELECT id FROM faculty WHERE name = 'ИПАИТ' LIMIT 1),
-        (SELECT id FROM speciality WHERE name = 'Программная инженерия' LIMIT 1));
-
-INSERT faculty_has_speciality (faculty_id, speciality_id)
-VALUES ((SELECT id FROM faculty WHERE name = 'ИПАИТ' LIMIT 1),
-        (SELECT id FROM speciality WHERE name = 'Прикладная информатика' LIMIT 1));
-
-INSERT faculty_has_speciality (faculty_id, speciality_id)
-VALUES ((SELECT id FROM faculty WHERE name = 'ИЕНИБ' LIMIT 1),
-        (SELECT id FROM speciality WHERE name = 'Биология' LIMIT 1));
-
-INSERT `group` (faculty_has_speciality_speciality_id, faculty_has_speciality_faculty_id, groupName, semester, course)
-VALUES ((SELECT id FROM speciality WHERE name = 'Программная инженерия' LIMIT 1),
-        (SELECT id FROM faculty WHERE name = 'ИПАИТ' LIMIT 1),
-        '71-ПГ',
-        3,
-        2),
-
-       ((SELECT id FROM speciality WHERE name = 'Прикладная информатика' LIMIT 1),
-        (SELECT id FROM faculty WHERE name = 'ИПАИТ' LIMIT 1),
-        '71-ПИ',
-        3,
-        2),
-
-       ((SELECT id FROM speciality WHERE name = 'Биология' LIMIT 1),
-        (SELECT id FROM faculty WHERE name = 'ИЕНИБ' LIMIT 1),
-        '71-Б',
-        3,
-        2);
-
-INSERT teacher (lastname, firstname, midname)
-VALUES ('Рыженков', 'Денис', 'Викторович'),
-       ('Волков', 'Вадим', 'Николаевич'),
-       ('Харламов', 'Владимир', 'Федорович'),
-       ('Фроленкова', 'Лариса', 'Юрьевна');
-
-INSERT subject (name)
-VALUES ('Базы данных'),
-       ('Биология'),
-       ('Физика');
-
-INSERT student (id, lastname, firstname, midname, address, birthDate, entryDate, group_id)
-VALUES (170576,
-        'Евдокимов',
-        'Никита',
-        'Александрович',
-        'г. Орёл, ул. Московское шоссе, 113б',
-        '1999-08-26',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-ПГ')),
-
-       (170586,
-        'Панин',
-        'Михаил',
-        'Сергеевич',
-        'г. Орёл, ул. Московское шоссе, 113а',
-        '1999-03-23',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-ПГ')),
-
-       (170572,
-        'Щекотихин',
-        'Сергей',
-        'Батькович',
-        'г. Туринская Слобода, ул. Московская, дом 76',
-        '1999-12-12',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-ПГ')),
-
-       (170554,
-        'Короткий',
-        'Александр',
-        'Иосифович',
-        'г. Рубцовск, ул. Батинская, дом 58',
-        '1999-04-04',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-ПГ')),
-
-       (170514,
-        'Кожухова',
-        'Ольга',
-        'Влдаимировна',
-        'г. Барыш, ул. Бабаевская улица, дом 96',
-        '1999-02-02',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-ПГ')),
-
-       (170214,
-        'Григорьев',
-        'Михаил',
-        'Николаевич',
-        'г. Нелидово, ул. Вагонников 1-я, дом 72',
-        '1974-06-01',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-ПИ')),
-
-       (170265,
-        'Кудрявцев',
-        'Светозар',
-        'Сергеевич',
-        'г. Заречье, ул. Завокзальная 1-я, дом 5',
-        '1970-08-12',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-ПИ')),
-
-       (170123,
-        'Виноградов',
-        'Глеб',
-        'Евгеньевич',
-        'г. Онгудай, ул. Строителей, дом 41',
-        '1986-09-17',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-ПИ')),
-
-       (170122,
-        'Сысолятина',
-        'Антонида',
-        'Владиславовна',
-        'г. Верхневилюйск, ул. Беговая 4-я, дом 4',
-        '1973-09-10',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-ПИ')),
-
-       (170222,
-        'Киселёва',
-        'Злата',
-        'Федоровна',
-        'г. Красная Горбатка, ул. Веселова, дом 27',
-        '1976-06-18',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-ПИ')),
-
-       (170224,
-        'Городнова',
-        'Лиана',
-        'Богдановна',
-        'г. Маркс, ул. Батайская, дом 10',
-        '1985-06-11',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-Б')),
-
-       (170784,
-        'Перкосрака',
-        'Даздраперма',
-        'Иосивна',
-        'г. Суздаль, ул. Достоевского, дом 94',
-        '1992-10-04',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-Б')),
-
-       (170124,
-        'Будигост',
-        'Борщ',
-        'Малевич',
-        'г. Тишино, ул. Весенняя, дом 83',
-        '1975-04-20',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-Б')),
-
-       (170524,
-        'Здиславин',
-        'Жирослав',
-        'Коземирович',
-        'г. Чернышковский, ул. Вагжанова, дом 86',
-        '1977-006-04',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-Б')),
-
-       (170573,
-        'Трифонова',
-        'Аграфена',
-        'Сергеевна',
-        ' г. Брянское, ул. Садовая, дом 16',
-        '1967-09-16',
-        '2017-09-01',
-        (SELECT id FROM `group` WHERE groupName = '71-Б'));
-
-INSERT phone (student_id, number)
-VALUES (170573, 88005553535),
-       (170265, 88005553536),
-       (170122, 88005553537),
-       (170214, 88005553538),
-       (170124, 88005553539),
-       (170222, 88005553540),
-       (170524, 88005553541),
-       (170224, 88005553542),
-       (170123, 88005553543),
-       (170784, 88005553544),
-       (170514, 88005553545),
-       (170586, 88005553546),
-       (170554, 88005553547),
-       (170576, 88005553548),
-       (170572, 88005553549),
-       (170124, 88005553550),
-       (170123, 88005553551);
-
-INSERT class_type (type_name, hours_number)
-VALUES ('Лабораторная работа', 2),
-       ('Практическая работа', 1),
-       ('Лекция', 1);
-
-alter table group_has_type_subject_teacher
-  drop primary key,
-  add primary key (class_type_id, group_id, subject_id, teacher_id);
-
-INSERT group_has_type_subject_teacher (class_type_id, group_id, subject_id, teacher_id, hours_number)
+INSERT
+faculty
+(
+name
+)
 VALUES
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Рыженков'
-    AND teacher.firstname = 'Денис'
-    AND teacher.midname = 'Викторович'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1)
+(
+''
+ИПАИТ
+''
+),
+(
+''
+ИЕНИБ
+''
+);
+
+INSERT
+speciality
+(
+name
+)
+VALUES
+(
+''
+Программная
+инженерия
+''
+),
+(
+''
+Биология
+''
+),
+(
+''
+Прикладная
+информатика
+''
+);
+
+INSERT
+faculty_has_speciality
+(
+faculty_id,
+speciality_id
+)
+VALUES
+(
+(
+SELECT
+id
+FROM
+faculty
+WHERE
+name
+=
+''
+ИПАИТ
+''
+LIMIT
+1
+),
+(
+SELECT
+id
+FROM
+speciality
+WHERE
+name
+=
+''
+Программная
+инженерия
+''
+LIMIT
+1
+)
+);
+
+INSERT
+faculty_has_speciality
+(
+faculty_id,
+speciality_id
+)
+VALUES
+(
+(
+SELECT
+id
+FROM
+faculty
+WHERE
+name
+=
+''
+ИПАИТ
+''
+LIMIT
+1
+),
+(
+SELECT
+id
+FROM
+speciality
+WHERE
+name
+=
+''
+Прикладная
+информатика
+''
+LIMIT
+1
+)
+);
+
+INSERT
+faculty_has_speciality
+(
+faculty_id,
+speciality_id
+)
+VALUES
+(
+(
+SELECT
+id
+FROM
+faculty
+WHERE
+name
+=
+''
+ИЕНИБ
+''
+LIMIT
+1
+),
+(
+SELECT
+id
+FROM
+speciality
+WHERE
+name
+=
+''
+Биология
+''
+LIMIT
+1
+)
+);
+
+INSERT
+`group`
+(
+faculty_has_speciality_speciality_id,
+faculty_has_speciality_faculty_id,
+groupName,
+semester,
+course
+)
+VALUES
+(
+(
+SELECT
+id
+FROM
+speciality
+WHERE
+name
+=
+''
+Программная
+инженерия
+''
+LIMIT
+1
+),
+(
+SELECT
+id
+FROM
+faculty
+WHERE
+name
+=
+''
+ИПАИТ
+''
+LIMIT
+1
+),
+''
+71
+-
+ПГ
+'',
+3,
+2
 ),
 
 (
- (SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Волков'
-    AND teacher.firstname = 'Вадим'
-    AND teacher.midname = 'Николаевич'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1)
- ),
-
 (
- (SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Рыженков'
-    AND teacher.firstname = 'Денис'
-    AND teacher.midname = 'Викторович'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1)
- ),
-
+SELECT
+id
+FROM
+speciality
+WHERE
+name
+=
+''
+Прикладная
+информатика
+''
+LIMIT
+1
+),
 (
- (SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Рыженков'
-    AND teacher.firstname = 'Денис'
-    AND teacher.midname = 'Викторович'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1)
- );
-
-INSERT group_has_type_subject_teacher (class_type_id, group_id, subject_id, teacher_id, hours_number)
-VALUES
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Харламов'
-    AND teacher.firstname = 'Владимир'
-    AND teacher.midname = 'Федорович'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1)),
-
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПГ' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Харламов'
-    AND teacher.firstname = 'Владимир'
-    AND teacher.midname = 'Федорович'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1)
-);
-
-INSERT group_has_type_subject_teacher (class_type_id, group_id, subject_id, teacher_id, hours_number)
-VALUES
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПИ' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Харламов'
-    AND teacher.firstname = 'Владимир'
-    AND teacher.midname = 'Федорович'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1)),
-
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-ПИ' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Харламов'
-    AND teacher.firstname = 'Владимир'
-    AND teacher.midname = 'Федорович'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1)
-);
-
-INSERT group_has_type_subject_teacher (class_type_id, group_id, subject_id, teacher_id, hours_number)
-VALUES
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Харламов'
-    AND teacher.firstname = 'Владимир'
-    AND teacher.midname = 'Федорович'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1)),
-
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Харламов'
-    AND teacher.firstname = 'Владимир'
-    AND teacher.midname = 'Федорович'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1)
+SELECT
+id
+FROM
+faculty
+WHERE
+name
+=
+''
+ИПАИТ
+''
+LIMIT
+1
+),
+''
+71
+-
+ПИ
+'',
+3,
+2
 ),
 
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Физика' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Харламов'
-    AND teacher.firstname = 'Владимир'
-    AND teacher.midname = 'Федорович'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1)
+(
+(
+SELECT
+id
+FROM
+speciality
+WHERE
+name
+=
+''
+Биология
+''
+LIMIT
+1
+),
+(
+SELECT
+id
+FROM
+faculty
+WHERE
+name
+=
+''
+ИЕНИБ
+''
+LIMIT
+1
+),
+''
+71
+-
+Б
+'',
+3,
+2
 );
 
-INSERT group_has_type_subject_teacher (class_type_id, group_id, subject_id, teacher_id, hours_number)
+INSERT
+teacher
+(
+lastname,
+firstname,
+midname
+)
 VALUES
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Биология' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Фроленкова'
-    AND teacher.firstname = 'Лариса'
-    AND teacher.midname = 'Юрьевна'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лекция' LIMIT 1)),
+(
+''
+Рыженков
+'',
+''
+Денис
+'',
+''
+Викторович
+''
+),
+(
+''
+Волков
+'',
+''
+Вадим
+'',
+''
+Николаевич
+''
+),
+(
+''
+Харламов
+'',
+''
+Владимир
+'',
+''
+Федорович
+''
+),
+(
+''
+Фроленкова
+'',
+''
+Лариса
+'',
+''
+Юрьевна
+''
+);
 
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Биология' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Фроленкова'
-    AND teacher.firstname = 'Лариса'
-    AND teacher.midname = 'Юрьевна'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Практическая работа' LIMIT 1)
+INSERT
+subject
+(
+name
+)
+VALUES
+(
+''
+Базы
+данных
+''
+),
+(
+''
+Биология
+''
+),
+(
+''
+Физика
+''
+);
+
+INSERT
+student
+(
+id,
+lastname,
+firstname,
+midname,
+address,
+birthDate,
+entryDate,
+group_id
+)
+VALUES
+(
+170576,
+''
+Евдокимов
+'',
+''
+Никита
+'',
+''
+Александрович
+'',
+''
+г
+.
+Орёл,
+ул
+.
+Московское
+шоссе,
+113б
+'',
+''
+1999
+-
+08
+-
+26
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПГ
+''
+)
 ),
 
-((SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1),
- (SELECT `group`.id FROM `group` WHERE `group`.groupName = '71-Б' LIMIT 1),
- (SELECT subject.id FROM subject WHERE subject.name = 'Биология' LIMIT 1),
- (SELECT teacher.id
-  FROM teacher
-  WHERE teacher.lastname = 'Фроленкова'
-    AND teacher.firstname = 'Лариса'
-    AND teacher.midname = 'Юрьевна'
-  LIMIT 1),
- (SELECT class_type.hours_number FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1)
+(
+170586,
+''
+Панин
+'',
+''
+Михаил
+'',
+''
+Сергеевич
+'',
+''
+г
+.
+Орёл,
+ул
+.
+Московское
+шоссе,
+113а
+'',
+''
+1999
+-
+03
+-
+23
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПГ
+''
+)
+),
+
+(
+170572,
+''
+Щекотихин
+'',
+''
+Сергей
+'',
+''
+Батькович
+'',
+''
+г
+.
+Туринская
+Слобода,
+ул
+.
+Московская,
+дом
+76
+'',
+''
+1999
+-
+12
+-
+12
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПГ
+''
+)
+),
+
+(
+170554,
+''
+Короткий
+'',
+''
+Александр
+'',
+''
+Иосифович
+'',
+''
+г
+.
+Рубцовск,
+ул
+.
+Батинская,
+дом
+58
+'',
+''
+1999
+-
+04
+-
+04
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПГ
+''
+)
+),
+
+(
+170514,
+''
+Кожухова
+'',
+''
+Ольга
+'',
+''
+Влдаимировна
+'',
+''
+г
+.
+Барыш,
+ул
+.
+Бабаевская
+улица,
+дом
+96
+'',
+''
+1999
+-
+02
+-
+02
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПГ
+''
+)
+),
+
+(
+170214,
+''
+Григорьев
+'',
+''
+Михаил
+'',
+''
+Николаевич
+'',
+''
+г
+.
+Нелидово,
+ул
+.
+Вагонников
+1
+-
+я,
+дом
+72
+'',
+''
+1974
+-
+06
+-
+01
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПИ
+''
+)
+),
+
+(
+170265,
+''
+Кудрявцев
+'',
+''
+Светозар
+'',
+''
+Сергеевич
+'',
+''
+г
+.
+Заречье,
+ул
+.
+Завокзальная
+1
+-
+я,
+дом
+5
+'',
+''
+1970
+-
+08
+-
+12
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПИ
+''
+)
+),
+
+(
+170123,
+''
+Виноградов
+'',
+''
+Глеб
+'',
+''
+Евгеньевич
+'',
+''
+г
+.
+Онгудай,
+ул
+.
+Строителей,
+дом
+41
+'',
+''
+1986
+-
+09
+-
+17
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПИ
+''
+)
+),
+
+(
+170122,
+''
+Сысолятина
+'',
+''
+Антонида
+'',
+''
+Владиславовна
+'',
+''
+г
+.
+Верхневилюйск,
+ул
+.
+Беговая
+4
+-
+я,
+дом
+4
+'',
+''
+1973
+-
+09
+-
+10
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПИ
+''
+)
+),
+
+(
+170222,
+''
+Киселёва
+'',
+''
+Злата
+'',
+''
+Федоровна
+'',
+''
+г
+.
+Красная
+Горбатка,
+ул
+.
+Веселова,
+дом
+27
+'',
+''
+1976
+-
+06
+-
+18
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПИ
+''
+)
+),
+
+(
+170224,
+''
+Городнова
+'',
+''
+Лиана
+'',
+''
+Богдановна
+'',
+''
+г
+.
+Маркс,
+ул
+.
+Батайская,
+дом
+10
+'',
+''
+1985
+-
+06
+-
+11
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+)
+),
+
+(
+170784,
+''
+Перкосрака
+'',
+''
+Даздраперма
+'',
+''
+Иосивна
+'',
+''
+г
+.
+Суздаль,
+ул
+.
+Достоевского,
+дом
+94
+'',
+''
+1992
+-
+10
+-
+04
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+)
+),
+
+(
+170124,
+''
+Будигост
+'',
+''
+Борщ
+'',
+''
+Малевич
+'',
+''
+г
+.
+Тишино,
+ул
+.
+Весенняя,
+дом
+83
+'',
+''
+1975
+-
+04
+-
+20
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+)
+),
+
+(
+170524,
+''
+Здиславин
+'',
+''
+Жирослав
+'',
+''
+Коземирович
+'',
+''
+г
+.
+Чернышковский,
+ул
+.
+Вагжанова,
+дом
+86
+'',
+''
+1977
+-
+006
+-
+04
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+)
+),
+
+(
+170573,
+''
+Трифонова
+'',
+''
+Аграфена
+'',
+''
+Сергеевна
+'',
+''
+г
+.
+Брянское,
+ул
+.
+Садовая,
+дом
+16
+'',
+''
+1967
+-
+09
+-
+16
+'',
+''
+2017
+-
+09
+-
+01
+'',
+(
+SELECT
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+)
 );
 
-ALTER TABLE class
-  ADD COLUMN group_has_type_subject_teacher_teacher_id INT NOT NULL,
+INSERT
+phone
+(
+student_id,
+number
+)
+VALUES
+(
+170573,
+88005553535
+),
+(
+170265,
+88005553536
+),
+(
+170122,
+88005553537
+),
+(
+170214,
+88005553538
+),
+(
+170124,
+88005553539
+),
+(
+170222,
+88005553540
+),
+(
+170524,
+88005553541
+),
+(
+170224,
+88005553542
+),
+(
+170123,
+88005553543
+),
+(
+170784,
+88005553544
+),
+(
+170514,
+88005553545
+),
+(
+170586,
+88005553546
+),
+(
+170554,
+88005553547
+),
+(
+170576,
+88005553548
+),
+(
+170572,
+88005553549
+),
+(
+170124,
+88005553550
+),
+(
+170123,
+88005553551
+);
 
-  ADD CONSTRAINT fk_class_group_has_type_subject_teacher_teacher_id
-    FOREIGN KEY (group_has_type_subject_teacher_teacher_id)
-      REFERENCES journal.group_has_type_subject_teacher (teacher_id)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION;
+INSERT
+class_type
+(
+type_name,
+hours_number
+)
+VALUES
+(
+''
+Лабораторная
+работа
+'',
+2
+),
+(
+''
+Практическая
+работа
+'',
+1
+),
+(
+''
+Лекция
+'',
+1
+);
 
-INSERT class (date,
-              topic,
-              group_has_type_subject_teacher_teacher_id,
-              group_has_type_subject_teacher_group_id,
-              group_has_type_subject_teacher_subject_id,
-              group_has_type_subject_teacher_class_type_id)
+#
+Added
+INSERT
+group_has_type_subject_teacher
+(
+class_type_id,
+group_id,
+subject_id,
+teacher_id,
+hours_number
+)
+VALUES
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+ПГ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Рыженков
+''
+AND
+teacher
+.
+firstname
+=
+''
+Денис
+''
+AND
+teacher
+.
+midname
+=
+''
+Викторович
+''
+LIMIT
+1
+),
+14
+),
 
-VALUES ('2018-12-24',
-        'Тема по базам данных №1',
-        (SELECT teacher.id
-         FROM teacher
-         WHERE teacher.lastname = 'Рыженков'
-           AND teacher.firstname = 'Денис'
-           AND teacher.midname = 'Викторович'
-         LIMIT 1),
-        (SELECT `group`.id FROM `group` WHERE groupName = '71-ПГ'),
-        (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных'),
-        (SELECT id FROM class_type WHERE class_type.type_name = 'Лекция')),
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лабораторная
+работа
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+ПГ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Волков
+''
+AND
+teacher
+.
+firstname
+=
+''
+Вадим
+''
+AND
+teacher
+.
+midname
+=
+''
+Николаевич
+''
+LIMIT
+1
+),
+20
+),
 
-       ('2018-12-25',
-        NULL,
-        (SELECT teacher.id
-         FROM teacher
-         WHERE teacher.lastname = 'Рыженков'
-           AND teacher.firstname = 'Денис'
-           AND teacher.midname = 'Викторович'
-         LIMIT 1),
-        (SELECT `group`.id FROM `group` WHERE groupName = '71-ПГ'),
-        (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных'),
-        (SELECT id FROM class_type WHERE class_type.type_name = 'Лабораторная работа')),
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Практическая
+работа
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+ПГ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Рыженков
+''
+AND
+teacher
+.
+firstname
+=
+''
+Денис
+''
+AND
+teacher
+.
+midname
+=
+''
+Викторович
+''
+LIMIT
+1
+),
+14
+);
 
-       ('2018-12-26',
-        NULL,
-        (SELECT teacher.id
-         FROM teacher
-         WHERE teacher.lastname = 'Волков'
-           AND teacher.firstname = 'Вадим'
-           AND teacher.midname = 'Николаевич'
-         LIMIT 1),
-        (SELECT `group`.id FROM `group` WHERE groupName = '71-ПГ'),
-        (SELECT subject.id FROM subject WHERE subject.name = 'Базы данных' LIMIT 1),
-        (SELECT class_type.id FROM class_type WHERE class_type.type_name = 'Лабораторная работа' LIMIT 1));
+#
+Added
+INSERT
+group_has_type_subject_teacher
+(
+class_type_id,
+group_id,
+subject_id,
+teacher_id,
+hours_number
+)
+VALUES
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+ПГ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Харламов
+''
+AND
+teacher
+.
+firstname
+=
+''
+Владимир
+''
+AND
+teacher
+.
+midname
+=
+''
+Федорович
+''
+LIMIT
+1
+),
+14
+),
+
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Практическая
+работа
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+ПГ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Харламов
+''
+AND
+teacher
+.
+firstname
+=
+''
+Владимир
+''
+AND
+teacher
+.
+midname
+=
+''
+Федорович
+''
+LIMIT
+1
+),
+12
+);
+
+#
+Added
+INSERT
+group_has_type_subject_teacher
+(
+class_type_id,
+group_id,
+subject_id,
+teacher_id,
+hours_number
+)
+VALUES
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+ПИ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Харламов
+''
+AND
+teacher
+.
+firstname
+=
+''
+Владимир
+''
+AND
+teacher
+.
+midname
+=
+''
+Федорович
+''
+LIMIT
+1
+),
+16
+),
+
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Практическая
+работа
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+ПИ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Харламов
+''
+AND
+teacher
+.
+firstname
+=
+''
+Владимир
+''
+AND
+teacher
+.
+midname
+=
+''
+Федорович
+''
+LIMIT
+1
+),
+10
+);
+
+#
+Added
+INSERT
+group_has_type_subject_teacher
+(
+class_type_id,
+group_id,
+subject_id,
+teacher_id,
+hours_number
+)
+VALUES
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+Б
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Харламов
+''
+AND
+teacher
+.
+firstname
+=
+''
+Владимир
+''
+AND
+teacher
+.
+midname
+=
+''
+Федорович
+''
+LIMIT
+1
+),
+16
+),
+
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Практическая
+работа
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+Б
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Харламов
+''
+AND
+teacher
+.
+firstname
+=
+''
+Владимир
+''
+AND
+teacher
+.
+midname
+=
+''
+Федорович
+''
+LIMIT
+1
+),
+8
+),
+
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лабораторная
+работа
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+Б
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Харламов
+''
+AND
+teacher
+.
+firstname
+=
+''
+Владимир
+''
+AND
+teacher
+.
+midname
+=
+''
+Федорович
+''
+LIMIT
+1
+),
+12
+);
+
+#
+Added
+INSERT
+group_has_type_subject_teacher
+(
+class_type_id,
+group_id,
+subject_id,
+teacher_id,
+hours_number
+)
+VALUES
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+Б
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Биология
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Фроленкова
+''
+AND
+teacher
+.
+firstname
+=
+''
+Лариса
+''
+AND
+teacher
+.
+midname
+=
+''
+Юрьевна
+''
+LIMIT
+1
+),
+20
+),
+
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Практическая
+работа
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+Б
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Биология
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Фроленкова
+''
+AND
+teacher
+.
+firstname
+=
+''
+Лариса
+''
+AND
+teacher
+.
+midname
+=
+''
+Юрьевна
+''
+LIMIT
+1
+),
+18
+),
+
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лабораторная
+работа
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+Б
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Биология
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Фроленкова
+''
+AND
+teacher
+.
+firstname
+=
+''
+Лариса
+''
+AND
+teacher
+.
+midname
+=
+''
+Юрьевна
+''
+LIMIT
+1
+),
+32
+);
+
+#
+Added
+INSERT
+group_has_type_subject_teacher
+(
+class_type_id,
+group_id,
+subject_id,
+teacher_id,
+hours_number
+)
+VALUES
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лабораторная
+работа
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+ПИ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Рыженков
+''
+AND
+teacher
+.
+firstname
+=
+''
+Денис
+''
+AND
+teacher
+.
+midname
+=
+''
+Викторович
+''
+LIMIT
+1
+),
+24
+),
+
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+ПИ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Рыженков
+''
+AND
+teacher
+.
+firstname
+=
+''
+Денис
+''
+AND
+teacher
+.
+midname
+=
+''
+Викторович
+''
+LIMIT
+1
+),
+18
+),
+
+(
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Практическая
+работа
+''
+LIMIT
+1
+),
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+`group`
+.
+groupName
+=
+''
+71
+-
+ПИ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+LIMIT
+1
+),
+(
+SELECT
+teacher
+.
+id
+FROM
+teacher
+WHERE
+teacher
+.
+lastname
+=
+''
+Волков
+''
+AND
+teacher
+.
+firstname
+=
+''
+Вадим
+''
+AND
+teacher
+.
+midname
+=
+''
+Николаевич
+''
+LIMIT
+1
+),
+18
+);
+
+INSERT
+class
+(
+date,
+topic,
+group_has_type_subject_teacher_group_id,
+group_has_type_subject_teacher_subject_id,
+group_has_type_subject_teacher_class_type_id
+)
+
+VALUES
+(
+''
+2018
+-
+12
+-
+10
+'',
+''
+Тема
+по
+биологии
+№
+1
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Биология
+''
+),
+(
+SELECT
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+)
+),
+
+(
+''
+2018
+-
+12
+-
+12
+'',
+''
+Препарирование
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Биология
+''
+),
+(
+SELECT
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лабораторная
+работа
+''
+)
+),
+
+(
+''
+2018
+-
+12
+-
+18
+'',
+''
+Подсчет
+популяции
+белок
+в
+Орловской
+области
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Биология
+''
+LIMIT
+1
+),
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Практическая
+работа
+''
+LIMIT
+1
+)
+);
+
+INSERT
+class
+(
+date,
+topic,
+group_has_type_subject_teacher_group_id,
+group_has_type_subject_teacher_subject_id,
+group_has_type_subject_teacher_class_type_id
+)
+
+VALUES
+(
+''
+2018
+-
+12
+-
+10
+'',
+''
+Тема
+по
+физике
+№
+1
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПИ
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+),
+(
+SELECT
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+)
+),
+
+(
+''
+2018
+-
+12
+-
+18
+'',
+''
+Протирание
+эбонитовых
+палочек
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПИ
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+LIMIT
+1
+),
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Практическая
+работа
+''
+LIMIT
+1
+)
+);
+
+INSERT
+class
+(
+date,
+topic,
+group_has_type_subject_teacher_group_id,
+group_has_type_subject_teacher_subject_id,
+group_has_type_subject_teacher_class_type_id
+)
+
+VALUES
+(
+''
+2018
+-
+12
+-
+10
+'',
+''
+Тема
+по
+физике
+№
+1
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПГ
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+),
+(
+SELECT
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+)
+),
+
+(
+''
+2018
+-
+12
+-
+18
+'',
+''
+Протирание
+эбонитовых
+палочек
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПГ
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+LIMIT
+1
+),
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Практическая
+работа
+''
+LIMIT
+1
+)
+);
+
+INSERT
+class
+(
+date,
+topic,
+group_has_type_subject_teacher_group_id,
+group_has_type_subject_teacher_subject_id,
+group_has_type_subject_teacher_class_type_id
+)
+
+VALUES
+(
+''
+2018
+-
+12
+-
+10
+'',
+''
+Тема
+по
+физике
+№
+1
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+),
+(
+SELECT
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+)
+),
+
+(
+''
+2018
+-
+12
+-
+12
+'',
+''
+Электропроводимость
+полупроводников
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+),
+(
+SELECT
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лабораторная
+работа
+''
+)
+),
+
+(
+''
+2018
+-
+12
+-
+18
+'',
+''
+Протирание
+эбонитовых
+палочек
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+Б
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Физика
+''
+LIMIT
+1
+),
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Практическая
+работа
+''
+LIMIT
+1
+)
+);
+
+INSERT
+class
+(
+date,
+topic,
+group_has_type_subject_teacher_group_id,
+group_has_type_subject_teacher_subject_id,
+group_has_type_subject_teacher_class_type_id
+)
+
+VALUES
+(
+''
+2018
+-
+12
+-
+24
+'',
+''
+Тема
+по
+базам
+данных
+№
+1
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПГ
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+),
+(
+SELECT
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+)
+),
+
+(
+''
+2018
+-
+12
+-
+25
+'',
+NULL,
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПГ
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+),
+(
+SELECT
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лабораторная
+работа
+''
+)
+),
+
+(
+''
+2018
+-
+12
+-
+26
+'',
+NULL,
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПГ
+''
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+LIMIT
+1
+),
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лабораторная
+работа
+''
+LIMIT
+1
+)
+);
+
+INSERT
+class
+(
+date,
+topic,
+group_has_type_subject_teacher_group_id,
+group_has_type_subject_teacher_subject_id,
+group_has_type_subject_teacher_class_type_id
+)
+
+VALUES
+(
+''
+2018
+-
+12
+-
+24
+'',
+''
+Тема
+по
+базам
+данных
+№
+1
+'',
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПИ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+LIMIT
+1
+),
+(
+SELECT
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лекция
+''
+LIMIT
+1
+)
+),
+
+(
+''
+2018
+-
+12
+-
+25
+'',
+NULL,
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПИ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+LIMIT
+1
+),
+(
+SELECT
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лабораторная
+работа
+''
+LIMIT
+1
+)
+),
+
+(
+''
+2018
+-
+12
+-
+26
+'',
+NULL,
+(
+SELECT
+`group`
+.
+id
+FROM
+`group`
+WHERE
+groupName
+=
+''
+71
+-
+ПИ
+''
+LIMIT
+1
+),
+(
+SELECT
+subject
+.
+id
+FROM
+subject
+WHERE
+subject
+.
+name
+=
+''
+Базы
+данных
+''
+LIMIT
+1
+),
+(
+SELECT
+class_type
+.
+id
+FROM
+class_type
+WHERE
+class_type
+.
+type_name
+=
+''
+Лабораторная
+работа
+''
+LIMIT
+1
+)
+);
+
+UPDATE `group`
+SET teacher_id = NULL
+WHERE groupName = '' 71-ПГ '';
+
+UPDATE `group`
+SET teacher_id = ((SELECT teacher.id
+                   FROM teacher
+                   WHERE teacher.lastname = ''
+    Рыженков
+    ''
+    AND
+    teacher
+    .
+    firstname =
+    ''
+    Денис
+    ''
+    AND
+    teacher
+    .
+    midname =
+    ''
+    Викторович
+    ''
+    LIMIT
+    1
+)
+)
+WHERE groupName = '' 71-ПИ '';
+
+UPDATE `group`
+SET teacher_id = (SELECT teacher.id
+                  FROM teacher
+                  WHERE teacher.lastname = ''
+    Фроленкова
+    ''
+    AND
+    teacher
+    .
+    firstname =
+    ''
+    Лариса
+    ''
+    AND
+    teacher
+    .
+    midname =
+    ''
+    Юрьевна
+    ''
+    LIMIT
+    1
+)
+WHERE groupName = '' 71-Б '';
+
+UPDATE `group`
+SET student_id = (SELECT id FROM student WHERE lastname = ''
+    Кожухова
+    ''
+)
+WHERE groupName = '' 71-ПГ '';
+
+UPDATE `group`
+SET student_id = (SELECT id FROM student WHERE lastname = ''
+    Киселёва
+    ''
+)
+WHERE groupName = '' 71-ПИ '';
+
+UPDATE `group`
+SET student_id = (SELECT id FROM student WHERE lastname = ''
+    Перкосрака
+    ''
+)
+WHERE groupName = '' 71-Б '';
+
+SELECT lastname
+FROM student
+       INNER JOIN `group`
+                  ON student.group_id = `group`.id
+WHERE groupName = '' 71-Б ''
