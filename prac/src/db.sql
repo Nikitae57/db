@@ -945,13 +945,242 @@ SELECT MIN(birthDate), student.group_id FROM student
 GROUP BY student.group_id;
 
 SELECT lastname, firstname, midname FROM student
-  INNER JOIN (SELECT id FROM `group` WHERE groupName = '71-ПГ') as gr
+  INNER JOIN (SELECT id FROM `group` WHERE groupName = '71-ПГ') AS gr
     ON student.group_id = gr.id;
 
 SELECT COUNT(hasMissed), `date` FROM class
-  INNER JOIN (SELECT student_id, class_id, hasMissed FROM student_has_class) as student_has_class
+  INNER JOIN (SELECT student_id, class_id, hasMissed FROM student_has_class) AS student_has_class
     ON student_has_class.class_id = class.id
   WHERE hasMissed = 1
   GROUP BY `date`;
 
+CREATE TRIGGER trigger_student_name
+  BEFORE INSERT
+  ON student FOR EACH ROW
+BEGIN
+  IF NEW.firstname REGEXP '[А-Яа-я]' != '' THEN
+    SET @firstname := NEW.firstname;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Только русские буквы';
+  END IF;
 
+  IF NEW.lastname REGEXP '[А-Яа-я]' != '' THEN
+    SET @lastname := NEW.lastname;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Только русские буквы';
+  END IF;
+
+  IF NEW.midname REGEXP '[А-Яа-я]' != '' THEN
+    SET @midname := NEW.midname;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Только русские буквы';
+  END IF;
+END;
+
+CREATE TRIGGER trigger_student_birthdate_lower_than_entry_date
+  BEFORE INSERT
+  ON student FOR EACH ROW
+BEGIN
+  IF NEW.birthDate < NEW.entryDate THEN
+    SET @birhdate = NEW.birthDate;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Родился позже, чем поступил?';
+  END IF;
+END;
+
+CREATE TRIGGER trigger_teacher_name
+  BEFORE INSERT
+  ON teacher FOR EACH ROW
+BEGIN
+  IF NEW.firstname REGEXP '[А-Яа-я]' != '' THEN
+    SET @firstname := NEW.firstname;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Только русские буквы';
+  END IF;
+
+  IF NEW.lastname REGEXP '[А-Яа-я]' != '' THEN
+    SET @lastname := NEW.lastname;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Только русские буквы';
+  END IF;
+
+  IF NEW.midname REGEXP '[А-Яа-я]' != '' THEN
+    SET @midname := NEW.midname;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Только русские буквы';
+  END IF;
+END;
+
+CREATE TRIGGER trigger_student_has_class_belongs_to_group
+  BEFORE INSERT
+  ON student_has_class FOR EACH ROW
+BEGIN
+  DECLARE student_group_id INT;
+  DECLARE class_group_id INT;
+
+  SET student_group_id =
+    (SELECT group_id FROM student WHERE student.id = NEW.student_id LIMIT 1);
+
+  SET class_group_id =
+      (SELECT class.group_has_type_subject_teacher_group_id FROM class WHERE class.id = NEW.class_id LIMIT 1);
+
+
+  IF student_group_id = class_group_id THEN
+    SET @student_id = NEW.student_id;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Студент не принадлежит этой группе';
+  END IF;
+END;
+
+CREATE TRIGGER trigger_glav_student_belongs_to_group
+  BEFORE UPDATE
+  ON `group` FOR EACH ROW
+BEGIN
+  DECLARE student_group_id INT;
+
+  SET student_group_id = (SELECT student.group_id FROM student WHERE student.id = NEW.student_id);
+
+  IF student_group_id = id THEN
+    SET @student_id = NEW.student_id;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Староста не из этой группы';
+  END IF;
+END;
+
+CREATE TRIGGER trigger_glav_student_belongs_to_group_insert
+  BEFORE UPDATE
+  ON `group` FOR EACH ROW
+BEGIN
+  DECLARE student_group_id INT;
+
+  SET student_group_id = (SELECT student.group_id FROM student WHERE student.id = NEW.student_id);
+
+  IF student_group_id = id THEN
+    SET @student_id = NEW.student_id;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Староста не из этой группы';
+  END IF;
+END;
+
+CREATE TRIGGER trigger_phone_only_digits
+  BEFORE INSERT
+  ON phone FOR EACH ROW
+BEGIN
+  IF NEW.number REGEXP '^[0-9]+$' THEN
+    SET @number = NEW.number;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Телефон может состоять только из цифр';
+  END IF ;
+END;
+
+CREATE TRIGGER trigger_student_birthdate_lower_than_today
+  BEFORE INSERT
+  ON student FOR EACH ROW
+BEGIN
+  DECLARE curr_date DATE;
+  SET curr_date = CURDATE();
+
+  IF NEW.birthDate < curr_date THEN
+    SET @birhdate = NEW.birthDate;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Родился позже, чем сегодня?';
+  end if;
+END;
+
+CREATE TRIGGER trigger_student_entrydate_lower_than_today
+  BEFORE INSERT
+  ON student FOR EACH ROW
+BEGIN
+  DECLARE curr_date DATE;
+  SET curr_date = CURDATE();
+
+  IF NEW.entryDate < curr_date THEN
+    SET @entryDate= NEW.entryDate;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Поступил позже, чем сегодня?';
+  end if;
+END;
+
+CREATE TRIGGER num_hours_type_class_less_0
+  BEFORE INSERT
+  ON class_type FOR EACH ROW
+BEGIN
+  IF NEW.hours_number > 0 THEN
+    SET @hours_number = NEW.hours_number;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Кол-во часов должно быть больше 0';
+  end if;
+END;
+
+CREATE TRIGGER num_hours_subject_less_0
+  BEFORE INSERT
+  ON group_has_type_subject_teacher FOR EACH ROW
+BEGIN
+  IF NEW.hours_number > 0 THEN
+    SET @hours_number = NEW.hours_number;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Кол-во часов должно быть больше 0';
+  end if;
+END;
+
+CREATE TRIGGER num_course_and_semester_less_0
+  BEFORE INSERT
+  ON `group` FOR EACH ROW
+BEGIN
+  IF NEW.course > 0 THEN
+    SET @course = NEW.course;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Курс группы должен быть больше 0';
+  end if;
+
+  IF NEW.semester > 0 THEN
+    SET @semester = NEW.semester;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Семестр группы должен быть больше 0';
+  end if;
+END;
+
+CREATE TRIGGER num_hours_type_class_less_0_update
+  BEFORE UPDATE
+  ON class_type FOR EACH ROW
+BEGIN
+  IF NEW.hours_number > 0 THEN
+    SET @hours_number = NEW.hours_number;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Кол-во часов должно быть больше 0';
+  end if;
+END;
+
+CREATE TRIGGER num_hours_subject_less_0_update
+  BEFORE UPDATE
+  ON group_has_type_subject_teacher FOR EACH ROW
+BEGIN
+  IF NEW.hours_number > 0 THEN
+    SET @hours_number = NEW.hours_number;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Кол-во часов должно быть больше 0';
+  end if;
+END;
+
+CREATE TRIGGER num_course_and_semester_less_0_update
+  BEFORE UPDATE
+  ON `group` FOR EACH ROW
+BEGIN
+  IF NEW.course > 0 THEN
+    SET @course = NEW.course;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Курс группы должен быть больше 0';
+  end if;
+
+  IF NEW.semester > 0 THEN
+    SET @semester = NEW.semester;
+  ELSE
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Семестр группы должен быть больше 0';
+  end if;
+END;
+
+DELIMITER //
+CREATE PROCEDURE nothing_in_nothing_out()
+BEGIN
+  SELECT * FROM student;
+END//

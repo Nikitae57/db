@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d23239d-3b22-4fac-ac6b-1109f5970f01" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/63a2cf13-51ac-4819-a04a-14b10457b841.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prac.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/prac.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +40,7 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="journal@127.0.0.1" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="journal: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="journal: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -51,90 +50,39 @@
       <node key="63a2cf13-51ac-4819-a04a-14b10457b841" />
     </checked>
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1727665550">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cell" value="13" />
-          <entry key="sql" value="3962" />
-          <entry key="txt" value="36" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="36" />
-          <entry key="SQL" value="864" />
-          <entry key="Scratch" value="3111" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="DATABASE/20585275-3b7c-489a-b2d2-3563d0463031" value="1" />
-          <entry key="SCHEMA:journal" value="1" />
-          <entry key="class" value="1" />
-          <entry key="class_type" value="1" />
-          <entry key="faculty" value="3" />
-          <entry key="faculty_has_speciality" value="2" />
-          <entry key="gr" value="2" />
-          <entry key="gr_fk_spec" value="1" />
-          <entry key="group" value="3" />
-          <entry key="spec" value="1" />
-          <entry key="speciality" value="4" />
-          <entry key="sql" value="3" />
-          <entry key="student" value="2" />
-          <entry key="subject" value="2" />
-          <entry key="teacher" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Database Element" value="23" />
-          <entry key="SQL" value="2" />
-          <entry key="Scratch" value="2" />
-          <entry key="UML" value="2" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="prac" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/prac.sql">
-          <provider selected="true" editor-type-id="text-editor">
+        <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/group">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
-              <caret column="8" selection-start-column="8" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/20585275-3b7c-489a-b2d2-3563d0463031/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="332" selection-start-line="332" selection-end-line="341" selection-end-column="2" />
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/group">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/src/db.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17172">
+              <caret line="954" column="17" selection-start-line="954" selection-start-column="17" selection-end-line="954" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/20585275-3b7c-489a-b2d2-3563d0463031/console.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/prac.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -164,107 +112,109 @@
               <ID>DATABASE</ID>
               <OriginalElement>20585275-3b7c-489a-b2d2-3563d0463031</OriginalElement>
               <nodes>
-                <node x="446.5" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty</node>
-                <node x="197.1071428571429" y="581.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher</node>
-                <node x="416.2738095238096" y="292.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
-                <node x="448.7738095238096" y="837.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone</node>
-                <node x="195.0" y="358.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject</node>
-                <node x="372.58333333333337" y="1016.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class</node>
-                <node x="512.5238095238096" y="548.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student</node>
-                <node x="227.6071428571429" y="804.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class</node>
-                <node x="0.0" y="347.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type</node>
-                <node x="612.5" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality</node>
-                <node x="309.25" y="124.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher</node>
-                <node x="498.25" y="146.5">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality</node>
+                <node x="676.765625" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty</node>
+                <node x="108.0" y="540.5">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone</node>
+                <node x="907.265625" y="789.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher</node>
+                <node x="398.0" y="468.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
+                <node x="467.6875" y="1286.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class</node>
+                <node x="515.265625" y="234.5">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality</node>
+                <node x="126.5234375" y="147.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student</node>
+                <node x="951.265625" y="1023.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class</node>
+                <node x="1234.765625" y="540.5">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type</node>
+                <node x="443.765625" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality</node>
+                <node x="831.265625" y="205.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher</node>
+                <node x="1015.765625" y="555.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
-                  <point x="27.75" y="-70.0" />
-                  <point x="335.8571428571429" y="523.0" />
-                  <point x="351.5" y="523.0" />
-                  <point x="-42.25" y="59.0" />
-                </edge>
-                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class">
-                  <point x="-49.0" y="-59.0" />
-                  <point x="421.58333333333337" y="991.0" />
-                  <point x="308.1071428571429" y="991.0" />
-                  <point x="0.0" y="81.0" />
+                  <point x="-38.25" y="-92.0" />
+                  <point x="1022.015625" y="764.0" />
+                  <point x="1005.265625" y="764.0" />
+                  <point x="58.0" y="77.5" />
                 </edge>
                 <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality">
-                  <point x="53.5" y="-36.5" />
-                  <point x="658.75" y="99.0" />
-                  <point x="691.0" y="99.0" />
-                  <point x="0.0" y="37.0" />
+                  <point x="-74.0" y="-48.0" />
+                  <point x="589.265625" y="122.0" />
+                  <point x="550.265625" y="122.0" />
+                  <point x="0.0" y="48.5" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class">
+                  <point x="67.5" y="-77.5" />
+                  <point x="670.1875" y="1261.0" />
+                  <point x="1060.265625" y="1261.0" />
+                  <point x="0.0" y="106.5" />
                 </edge>
                 <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
-                  <point x="49.0" y="-59.0" />
-                  <point x="519.5833333333334" y="991.0" />
-                  <point x="655.2738095238096" y="991.0" />
-                  <point x="655.2738095238096" y="779.0" />
-                  <point x="645.2738095238096" y="779.0" />
-                  <point x="44.25" y="103.0" />
-                </edge>
-                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
-                  <point x="-93.66666666666669" y="-103.0" />
-                  <point x="463.1071428571429" y="267.0" />
-                  <point x="436.0" y="267.0" />
-                  <point x="42.25" y="59.0" />
+                  <point x="-67.5" y="-77.5" />
+                  <point x="535.1875" y="1261.0" />
+                  <point x="97.5" y="1261.0" />
+                  <point x="97.5" y="448.0" />
+                  <point x="156.5234375" y="448.0" />
+                  <point x="-90.0" y="135.5" />
                 </edge>
                 <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group">
-                  <point x="83.25" y="-70.0" />
-                  <point x="391.3571428571429" y="523.0" />
-                  <point x="463.1071428571429" y="523.0" />
-                  <point x="-93.66666666666669" y="103.0" />
+                  <point x="-114.75" y="-92.0" />
+                  <point x="945.515625" y="764.0" />
+                  <point x="595.5" y="764.0" />
+                  <point x="0.0" y="135.5" />
                 </edge>
-                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
-                  <point x="93.66666666666676" y="103.0" />
-                  <point x="650.4404761904764" y="523.0" />
-                  <point x="645.2738095238096" y="523.0" />
-                  <point x="44.25" y="-103.0" />
-                </edge>
-                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type">
-                  <point x="-83.25" y="-70.0" />
-                  <point x="224.8571428571429" y="523.0" />
-                  <point x="87.5" y="523.0" />
-                  <point x="0.0" y="48.0" />
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
+                  <point x="158.0" y="-135.5" />
+                  <point x="753.5" y="448.0" />
+                  <point x="889.265625" y="448.0" />
+                  <point x="-58.0" y="77.5" />
                 </edge>
                 <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality">
-                  <point x="93.66666666666663" y="-103.0" />
-                  <point x="650.4404761904761" y="267.0" />
-                  <point x="658.75" y="267.0" />
-                  <point x="53.5" y="36.5" />
+                  <point x="0.0" y="-135.5" />
+                  <point x="595.5" y="448.0" />
+                  <point x="589.265625" y="448.0" />
+                  <point x="-74.0" y="48.0" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+                  <point x="-158.0" y="-135.5" />
+                  <point x="437.5" y="448.0" />
+                  <point x="276.5234375" y="448.0" />
+                  <point x="30.0" y="135.5" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type">
+                  <point x="114.75" y="-92.0" />
+                  <point x="1175.015625" y="764.0" />
+                  <point x="1355.265625" y="764.0" />
+                  <point x="0.0" y="63.0" />
                 </edge>
                 <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group">
-                  <point x="-44.25" y="-103.0" />
-                  <point x="0.0" y="103.0" />
+                  <point x="90.0" y="135.5" />
+                  <point x="336.5234375" y="438.0" />
+                  <point x="516.5" y="438.0" />
+                  <point x="-79.0" y="-135.5" />
                 </edge>
                 <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher">
-                  <point x="53.666666666666686" y="-81.0" />
-                  <point x="361.7738095238096" y="779.0" />
-                  <point x="382.1071428571429" y="779.0" />
-                  <point x="74.0" y="70.0" />
+                  <point x="-72.66666666666669" y="-106.5" />
+                  <point x="987.5989583333333" y="998.0" />
+                  <point x="958.265625" y="998.0" />
+                  <point x="-102.0" y="92.0" />
                 </edge>
                 <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty">
-                  <point x="-53.5" y="-36.5" />
-                  <point x="551.75" y="99.0" />
-                  <point x="519.5" y="99.0" />
-                  <point x="0.0" y="37.0" />
-                </edge>
-                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
-                  <point x="0.0" y="-48.0" />
-                  <point x="546.7738095238095" y="779.0" />
-                  <point x="556.7738095238096" y="779.0" />
-                  <point x="-44.25" y="103.0" />
+                  <point x="74.0" y="-48.0" />
+                  <point x="737.265625" y="122.0" />
+                  <point x="776.265625" y="122.0" />
+                  <point x="0.0" y="48.5" />
                 </edge>
                 <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject">
-                  <point x="-27.75" y="-70.0" />
-                  <point x="280.3571428571429" y="523.0" />
-                  <point x="268.0" y="523.0" />
-                  <point x="0.0" y="37.0" />
+                  <point x="38.25" y="-92.0" />
+                  <point x="1098.515625" y="764.0" />
+                  <point x="1115.265625" y="764.0" />
+                  <point x="0.0" y="48.5" />
+                </edge>
+                <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+                  <point x="0.0" y="-63.0" />
+                  <point x="243.0" y="448.0" />
+                  <point x="216.5234375" y="448.0" />
+                  <point x="-30.0" y="135.5" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.4081632653061224" x="552.5" y="578.0000000000001" />
+              <settings layout="Hierarchic Group" zoom="0.33519553072625696" x="485.0" y="706.0" />
               <SelectedNodes>
                 <node>20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
               </SelectedNodes>
@@ -289,22 +239,17 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="MavenProjectNavigator">
     <treeState>
       <expand />
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="447" />
+    <option name="y" value="61" />
+    <option name="width" value="1258" />
+    <option name="height" value="697" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -315,7 +260,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,6 +276,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,7 +284,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="database.main" />
@@ -372,16 +317,18 @@
       <workItem from="1542188855559" duration="2876000" />
       <workItem from="1543401063285" duration="5610000" />
       <workItem from="1543482424965" duration="2730000" />
+      <workItem from="1544425835431" duration="143000" />
+      <workItem from="1544425991147" duration="291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14649000" />
+    <option name="totallyTimeSpent" value="15083000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" weight="0.3326087" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.17381974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -393,43 +340,35 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="7" sideWeight="0.49891305" visible="true" weight="0.28694403" />
+      <window_info anchor="bottom" id="Database Console" order="7" sideWeight="0.49891305" visible="true" weight="0.2861991" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32968238" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50108695" side_tool="true" weight="0.38554215" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50108695" side_tool="true" visible="true" weight="0.3846154" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.2773925" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.27736053" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3295302" />
+      <window_info anchor="right" id="SciView" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/student" />
     <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/gr/index/gr_fk_spec" />
     <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/spec" />
     <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/group" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/63a2cf13-51ac-4819-a04a-14b10457b841/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/63a2cf13-51ac-4819-a04a-14b10457b841/console.sql" />
     <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/gr" />
     <entry file="das://63a2cf13-51ac-4819-a04a-14b10457b841/schema/mydb/table/speciality" />
-    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/class_type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/class_type" />
     <entry file="uml://DATABASE/20585275-3b7c-489a-b2d2-3563d0463031.SCHEMA:journal">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -468,13 +407,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prac.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prac.sql" />
     <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/faculty">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -483,130 +416,6 @@
       </provider>
     </entry>
     <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/speciality">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/20585275-3b7c-489a-b2d2-3563d0463031">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>20585275-3b7c-489a-b2d2-3563d0463031</OriginalElement>
-          <nodes>
-            <node x="446.5" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty</node>
-            <node x="197.1071428571429" y="581.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher</node>
-            <node x="416.2738095238096" y="292.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
-            <node x="448.7738095238096" y="837.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone</node>
-            <node x="195.0" y="358.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject</node>
-            <node x="372.58333333333337" y="1016.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class</node>
-            <node x="512.5238095238096" y="548.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student</node>
-            <node x="227.6071428571429" y="804.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class</node>
-            <node x="0.0" y="347.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type</node>
-            <node x="612.5" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality</node>
-            <node x="309.25" y="124.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher</node>
-            <node x="498.25" y="146.5">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
-              <point x="27.75" y="-70.0" />
-              <point x="335.8571428571429" y="523.0" />
-              <point x="351.5" y="523.0" />
-              <point x="-42.25" y="59.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class">
-              <point x="-49.0" y="-59.0" />
-              <point x="421.58333333333337" y="991.0" />
-              <point x="308.1071428571429" y="991.0" />
-              <point x="0.0" y="81.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality">
-              <point x="53.5" y="-36.5" />
-              <point x="658.75" y="99.0" />
-              <point x="691.0" y="99.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
-              <point x="49.0" y="-59.0" />
-              <point x="519.5833333333334" y="991.0" />
-              <point x="655.2738095238096" y="991.0" />
-              <point x="655.2738095238096" y="779.0" />
-              <point x="645.2738095238096" y="779.0" />
-              <point x="44.25" y="103.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
-              <point x="-93.66666666666669" y="-103.0" />
-              <point x="463.1071428571429" y="267.0" />
-              <point x="436.0" y="267.0" />
-              <point x="42.25" y="59.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group">
-              <point x="83.25" y="-70.0" />
-              <point x="391.3571428571429" y="523.0" />
-              <point x="463.1071428571429" y="523.0" />
-              <point x="-93.66666666666669" y="103.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
-              <point x="93.66666666666676" y="103.0" />
-              <point x="650.4404761904764" y="523.0" />
-              <point x="645.2738095238096" y="523.0" />
-              <point x="44.25" y="-103.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type">
-              <point x="-83.25" y="-70.0" />
-              <point x="224.8571428571429" y="523.0" />
-              <point x="87.5" y="523.0" />
-              <point x="0.0" y="48.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality">
-              <point x="93.66666666666663" y="-103.0" />
-              <point x="650.4404761904761" y="267.0" />
-              <point x="658.75" y="267.0" />
-              <point x="53.5" y="36.5" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group">
-              <point x="-44.25" y="-103.0" />
-              <point x="0.0" y="103.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher">
-              <point x="53.666666666666686" y="-81.0" />
-              <point x="361.7738095238096" y="779.0" />
-              <point x="382.1071428571429" y="779.0" />
-              <point x="74.0" y="70.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty">
-              <point x="-53.5" y="-36.5" />
-              <point x="551.75" y="99.0" />
-              <point x="519.5" y="99.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
-              <point x="0.0" y="-48.0" />
-              <point x="546.7738095238095" y="779.0" />
-              <point x="556.7738095238096" y="779.0" />
-              <point x="-44.25" y="103.0" />
-            </edge>
-            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject">
-              <point x="-27.75" y="-70.0" />
-              <point x="280.3571428571429" y="523.0" />
-              <point x="268.0" y="523.0" />
-              <point x="0.0" y="37.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.4081632653061224" x="552.5" y="578.0000000000001" />
-          <SelectedNodes>
-            <node>20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/faculty_has_speciality">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -627,13 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/student">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/group">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -641,10 +443,153 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/20585275-3b7c-489a-b2d2-3563d0463031/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="332" selection-start-line="332" selection-end-line="341" selection-end-column="2" />
+        <state relative-caret-position="17172">
+          <caret line="954" column="17" selection-start-line="954" selection-start-column="17" selection-end-line="954" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/student">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://20585275-3b7c-489a-b2d2-3563d0463031/schema/journal/table/faculty_has_speciality">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/20585275-3b7c-489a-b2d2-3563d0463031">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>20585275-3b7c-489a-b2d2-3563d0463031</OriginalElement>
+          <nodes>
+            <node x="676.765625" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty</node>
+            <node x="108.0" y="540.5">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone</node>
+            <node x="907.265625" y="789.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher</node>
+            <node x="398.0" y="468.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
+            <node x="467.6875" y="1286.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class</node>
+            <node x="515.265625" y="234.5">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality</node>
+            <node x="126.5234375" y="147.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student</node>
+            <node x="951.265625" y="1023.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class</node>
+            <node x="1234.765625" y="540.5">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type</node>
+            <node x="443.765625" y="0.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality</node>
+            <node x="831.265625" y="205.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher</node>
+            <node x="1015.765625" y="555.0">20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
+              <point x="-38.25" y="-92.0" />
+              <point x="1022.015625" y="764.0" />
+              <point x="1005.265625" y="764.0" />
+              <point x="58.0" y="77.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.speciality">
+              <point x="-74.0" y="-48.0" />
+              <point x="589.265625" y="122.0" />
+              <point x="550.265625" y="122.0" />
+              <point x="0.0" y="48.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class">
+              <point x="67.5" y="-77.5" />
+              <point x="670.1875" y="1261.0" />
+              <point x="1060.265625" y="1261.0" />
+              <point x="0.0" y="106.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student_has_class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+              <point x="-67.5" y="-77.5" />
+              <point x="535.1875" y="1261.0" />
+              <point x="97.5" y="1261.0" />
+              <point x="97.5" y="448.0" />
+              <point x="156.5234375" y="448.0" />
+              <point x="-90.0" y="135.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group">
+              <point x="-114.75" y="-92.0" />
+              <point x="945.515625" y="764.0" />
+              <point x="595.5" y="764.0" />
+              <point x="0.0" y="135.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.teacher">
+              <point x="158.0" y="-135.5" />
+              <point x="753.5" y="448.0" />
+              <point x="889.265625" y="448.0" />
+              <point x="-58.0" y="77.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality">
+              <point x="0.0" y="-135.5" />
+              <point x="595.5" y="448.0" />
+              <point x="589.265625" y="448.0" />
+              <point x="-74.0" y="48.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+              <point x="-158.0" y="-135.5" />
+              <point x="437.5" y="448.0" />
+              <point x="276.5234375" y="448.0" />
+              <point x="30.0" y="135.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class_type">
+              <point x="114.75" y="-92.0" />
+              <point x="1175.015625" y="764.0" />
+              <point x="1355.265625" y="764.0" />
+              <point x="0.0" y="63.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group">
+              <point x="90.0" y="135.5" />
+              <point x="336.5234375" y="438.0" />
+              <point x="516.5" y="438.0" />
+              <point x="-79.0" y="-135.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.class" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher">
+              <point x="-72.66666666666669" y="-106.5" />
+              <point x="987.5989583333333" y="998.0" />
+              <point x="958.265625" y="998.0" />
+              <point x="-102.0" y="92.0" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty_has_speciality" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.faculty">
+              <point x="74.0" y="-48.0" />
+              <point x="737.265625" y="122.0" />
+              <point x="776.265625" y="122.0" />
+              <point x="0.0" y="48.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group_has_type_subject_teacher" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.subject">
+              <point x="38.25" y="-92.0" />
+              <point x="1098.515625" y="764.0" />
+              <point x="1115.265625" y="764.0" />
+              <point x="0.0" y="48.5" />
+            </edge>
+            <edge source="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.phone" target="20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.student">
+              <point x="0.0" y="-63.0" />
+              <point x="243.0" y="448.0" />
+              <point x="216.5234375" y="448.0" />
+              <point x="-30.0" y="135.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.33519553072625696" x="485.0" y="706.0" />
+          <SelectedNodes>
+            <node>20585275-3b7c-489a-b2d2-3563d0463031.TABLE:journal.group</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/20585275-3b7c-489a-b2d2-3563d0463031/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prac.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
