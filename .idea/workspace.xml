@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67e7507f-881e-4c68-8396-c91f3e0a2a7c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prac/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/prac/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prac/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/prac/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prac/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prac/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/prac/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prac/src/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/prac/src/db.sql" afterDir="false" />
-    </list>
+    <list default="true" id="67e7507f-881e-4c68-8396-c91f3e0a2a7c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prac/src/db.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="980" selection-start-line="980" selection-end-line="980" />
+            <state relative-caret-position="4500">
+              <caret line="1185" column="5" selection-start-line="1185" selection-start-column="5" selection-end-line="1185" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -73,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e045cb4c-ec49-421c-912e-c30a20a79916/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="757">
-              <caret line="1184" column="3" selection-start-line="1184" selection-start-column="3" selection-end-line="1184" selection-end-column="3" />
+            <state relative-caret-position="318">
+              <caret line="1188" column="16" selection-start-line="1188" selection-start-column="16" selection-end-line="1188" selection-end-column="16" />
               <folding>
                 <element signature="e#5615#5671#0" />
                 <element signature="e#5674#5787#0" />
@@ -280,7 +273,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.console.LAST_STATE" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -312,12 +305,12 @@
       <workItem from="1543841496665" duration="18000" />
       <workItem from="1543938334964" duration="11292000" />
       <workItem from="1544000204471" duration="8607000" />
-      <workItem from="1544426283497" duration="7584000" />
+      <workItem from="1544426283497" duration="8060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27991000" />
+    <option name="totallyTimeSpent" value="28467000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -342,7 +335,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32918552" />
-      <window_info anchor="bottom" id="Database Console" order="7" weight="0.37443438" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="7" visible="true" weight="0.37443438" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32918552" />
@@ -457,13 +450,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prac/src/db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="980" selection-start-line="980" selection-end-line="980" />
         </state>
       </provider>
     </entry>
@@ -603,10 +589,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/prac/src/db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4500">
+          <caret line="1185" column="5" selection-start-line="1185" selection-start-column="5" selection-end-line="1185" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e045cb4c-ec49-421c-912e-c30a20a79916/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="1184" column="3" selection-start-line="1184" selection-start-column="3" selection-end-line="1184" selection-end-column="3" />
+        <state relative-caret-position="318">
+          <caret line="1188" column="16" selection-start-line="1188" selection-start-column="16" selection-end-line="1188" selection-end-column="16" />
           <folding>
             <element signature="e#5615#5671#0" />
             <element signature="e#5674#5787#0" />

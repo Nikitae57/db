@@ -1182,5 +1182,25 @@ END;
 DELIMITER //
 CREATE PROCEDURE nothing_in_nothing_out()
 BEGIN
-  SELECT * FROM student;
-END//
+  SELECT id, student.lastname, student.firstname, student.midname FROM student;
+END //
+
+DELIMITER //
+CREATE FUNCTION nothing_in_something_out() RETURNS VARCHAR(45)
+BEGIN
+  RETURN (SELECT student.firstname FROM student WHERE student.id = 170576 LIMIT 1);
+END //
+
+DELIMITER //
+CREATE PROCEDURE something_in_nothing_out(_id INT)
+BEGIN
+  SELECT student.lastname, student.firstname, student.midname FROM student WHERE student.id = _id;
+END //
+
+DELIMITER //
+CREATE FUNCTION something_in_something_out(_id INT) RETURNS VARCHAR(45)
+BEGIN
+  return (SELECT student.midname FROM student WHERE student.id = _id LIMIT 1);
+END //
+
+select something_in_something_out(170576)
