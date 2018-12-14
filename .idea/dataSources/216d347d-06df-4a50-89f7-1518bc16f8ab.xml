@@ -1267,78 +1267,93 @@ category_id</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <column id="299" parent="239" name="id">
+    <trigger id="299" parent="238" name="trigger_update_discount_state_for_order">
+      <SourceTextLength>159</SourceTextLength>
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+    </trigger>
+    <trigger id="300" parent="238" name="trigger_apply_discount">
+      <SourceTextLength>1283</SourceTextLength>
+      <Turn>before-row</Turn>
+      <Events>U</Events>
+    </trigger>
+    <column id="301" parent="239" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="239" name="price">
+    <column id="302" parent="239" name="price">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="239" name="amount">
+    <column id="303" parent="239" name="amount">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="239" name="meal_id">
+    <column id="304" parent="239" name="meal_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="239" name="order_id">
+    <column id="305" parent="239" name="order_id">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="304" parent="239" name="fk_order_entry_meal">
+    <index id="306" parent="239" name="fk_order_entry_meal">
       <ColNames>meal_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="305" parent="239" name="fk_order_entry_order">
+    <index id="307" parent="239" name="fk_order_entry_order">
       <ColNames>order_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="306" parent="239" name="PRIMARY">
+    <key id="308" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="307" parent="239" name="fk_order_entry_meal">
+    <foreign-key id="309" parent="239" name="fk_order_entry_meal">
       <ColNames>meal_id</ColNames>
       <RefSchemaName>cafe</RefSchemaName>
       <RefTableName>meal</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="308" parent="239" name="fk_order_entry_order">
+    <foreign-key id="310" parent="239" name="fk_order_entry_order">
       <ColNames>order_id</ColNames>
       <RefSchemaName>cafe</RefSchemaName>
       <RefTableName>order</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="309" parent="240" name="id">
+    <trigger id="311" parent="239" name="trigger_update_order_price">
+      <SourceTextLength>268</SourceTextLength>
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+    </trigger>
+    <column id="312" parent="240" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="240" name="name">
+    <column id="313" parent="240" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="311" parent="240" name="PRIMARY">
+    <key id="314" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

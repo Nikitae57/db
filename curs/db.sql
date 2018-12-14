@@ -163,46 +163,22 @@ INSERT cafe (address)
          ('Кафе №2');
 
 INSERT meal (name, weight, price, image_uri, calorie)
-VALUES ('Салат цезарь',
-        300,
-        200,
-        'https://goo.gl/images/gSpVXX',
-        400),
-       ('Сливочная маргарита',
-        500,
-        400,
-        'https://goo.gl/images/29QTzS',
-        800),
-       ('Латте с ванилью',
-        250,
-        150,
-        'https://goo.gl/images/gkFsR5',
-        200),
-       ('Шаурма со свининой',
-        290,
-        120,
-        'https://goo.gl/images/Ze9YM2',
-        400),
-       ('Картошка фри',
-        50,
-        60,
-        'https://goo.gl/images/6HCtqN',
-        300),
-       ('Яблочный сок',
-        250,
-        40,
-        'https://goo.gl/images/DfuYdA',
-        50),
-       ('Стафф с ветчиной',
-        500,
-        600,
-        'https://goo.gl/images/jgnt9n',
-        1000),
-       ('Сосиска в тесте',
-        100,
-        50,
-        'https://goo.gl/images/tr4VVz',
-        300);
+VALUES ('Салат цезарь', 300, 200,
+        'https://goo.gl/images/gSpVXX', 400),
+       ('Сливочная маргарита', 500, 400,
+        'https://goo.gl/images/29QTzS', 800),
+       ('Латте с ванилью', 250, 150,
+        'https://goo.gl/images/gkFsR5', 200),
+       ('Шаурма со свининой', 290, 120,
+        'https://goo.gl/images/Ze9YM2', 400),
+       ('Картошка фри', 50, 60,
+        'https://goo.gl/images/6HCtqN', 300),
+       ('Яблочный сок', 250, 40,
+        'https://goo.gl/images/DfuYdA', 50),
+       ('Стафф с ветчиной', 500, 600,
+        'https://goo.gl/images/jgnt9n', 1000),
+       ('Сосиска в тесте', 100, 50,
+        'https://goo.gl/images/tr4VVz', 300);
 
 INSERT category (name, description)
 VALUES ('Холодные блюда',
@@ -286,7 +262,104 @@ INSERT pay_method (name)
 VALUES ('По карте'),
        ('Наличными');
 
--- INSERT `order` (price, order_time, pay_method_id, cafe_id,
---                 discount_id, discount_card_id, is_paid)
---
--- VALUES ()
+INSERT `order` (id, price, order_time, pay_method_id, cafe_id,
+                discount_id, discount_card_id, is_paid)
+
+VALUES (1, 0, '2018-12-05 18:13:45',
+        (SELECT id FROM pay_method WHERE name = 'Наличными'),
+        1, NULL, NULL, FALSE),
+       (2, 0, '2018-12-05 18:09:45',
+        (SELECT id FROM pay_method WHERE name = 'Наличными'),
+        1, NULL,
+        (SELECT id FROM discount_card WHERE discount_card.phone = '+79995554422'),
+        FALSE),
+       (3, 0, '2018-09-11 12:10:28',
+        (SELECT id FROM pay_method WHERE name = 'По карте'),
+        2, NULL, NULL, FALSE),
+       (4, 0, '2018-12-10 15:52:11',
+        (SELECT id FROM pay_method WHERE name = 'По карте'),
+        2, NULL,
+        (SELECT id FROM discount_card WHERE discount_card.phone = '+78005553535'),
+        FALSE),
+       (5, 0, '2018-12-05 17:25:59',
+        (SELECT id FROM pay_method WHERE name = 'По карте'),
+        1, NULL, NULL, FALSE);
+
+CREATE TRIGGER trigger_update_order_price BEFORE INSERT
+ON order_entry FOR EACH ROW
+BEGIN
+  DECLARE meal_price INT;
+
+  SET meal_price = (SELECT meal.price FROM meal WHERE meal.id = NEW.meal_id LIMIT 1);
+  SET NEW.price = meal_price * NEW.amount;
+
+  UPDATE `order`
+  SET `order`.price = `order`.price + NEW.price
+    WHERE `order`.id = NEW.order_id;
+END;
+
+CREATE TRIGGER trigger_apply_discount BEFORE UPDATE
+ON `order` FOR EACH ROW
+this_trigger:BEGIN
+  DECLARE usual_discount INT;
+  DECLARE card_discount INT;
+  DECLARE order_entries_count INT;
+
+  IF NEW.is_paid = TRUE AND OLD.is_paid = FALSE THEN
+    IF NEW.discount_id IS NOT NULL AND NEW.discount_card_id IS NULL THEN
+      SET usual_discount = (SELECT discount.amount FROM discount
+        WHERE discount.id = NEW.discount_id LIMIT 1);
+
+      SET NEW.price = CEIL(OLD.price * (100 - usual_discount)/100);
+
+
+    ELSEIF NEW.discount_card_id IS NOT NULL THEN
+      SET order_entries_count = (SELECT COUNT(id) FROM order_entry WHERE order_entry.order_id = NEW.id);
+
+      IF order_entries_count <= 5 THEN
+        SET card_discount = 5;
+      ELSEIF order_entries_count <= 10 AND order_entries_count > 5 THEN
+        SET card_discount = 10;
+      ELSEIF order_entries_count > 10 THEN
+        SET card_discount = 15;
+      END IF;
+
+      IF NEW.discount_id IS NULL OR usual_discount < card_discount THEN
+        UPDATE `order`
+          SET NEW.price = CEIL(OLD.price * (100 - card_discount)/10);
+      ELSE
+        SET usual_discount = (SELECT discount.amount FROM discount
+          WHERE discount.id = NEW.discount_id LIMIT 1);
+
+        UPDATE `order`
+          SET NEW.price = CEIL(OLD.price * (100 - usual_discount)/100);
+      END IF;
+    END IF;
+  END IF;
+END;
+
+CREATE TRIGGER trigger_update_discount_state_for_order BEFORE INSERT
+ON `order` FOR EACH ROW
+BEGIN
+  SET NEW.discount_id = (SELECT id FROM discount
+    WHERE discount.finish_time >= CURDATE()
+          AND discount.start_time <= CURDATE() LIMIT 1);
+END;
+
+insert into order_entry (price, amount, meal_id, order_id)
+values (0, 2, (SELECT id FROM meal WHERE name = 'Салат цезарь'), 1),
+       (0, 5, (SELECT id FROM meal WHERE name = 'Картошка фри'), 1),
+       (0, 2, (SELECT id FROM meal WHERE name = 'Яблочный сок'), 1),
+
+       (0, 1, (SELECT id FROM meal WHERE name = 'Стафф с ветчиной'), 2),
+       (0, 1, (SELECT id FROM meal WHERE name = 'Шаурма со свининой'), 2),
+       (0, 1, (SELECT id FROM meal WHERE name = 'Сливочная маргарита'), 2),
+       (0, 2, (SELECT id FROM meal WHERE name = 'Латте с ванилью'), 2),
+
+       (0, 1, (SELECT id FROM meal WHERE name = 'Сосиска в тесте'), 3),
+
+       (0, 20, (SELECT id FROM meal WHERE name = 'Шаурма со свининой'), 4),
+       (0, 1, (SELECT id FROM meal WHERE name = 'Яблочный сок'), 4),
+
+       (0, 1, (SELECT id FROM meal WHERE name = 'Сливочная маргарита'), 5),
+       (0, 2, (SELECT id FROM meal WHERE name = 'Латте с ванилью'), 5);
